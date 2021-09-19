@@ -1,0 +1,456 @@
+/*88888b  .o88b.  .d88b.  d8b   db .d8888. 
+  `88'   d8P  Y8 .8P  Y8. 888o  88 88'  YP 
+   88    8P      88    88 88V8o 88 `8bo.   
+   88    8b      88    88 88 V8o88   `Y8b. 
+  .88.   Y8b  d8 `8b  d8' 88  V888 db   8D 
+Y888888P  `Y88P'  `Y88P'  VP   V8P `8888*/
+
+.icon {
+  // color: var(--color-bg-header);
+  height: calc(var(--height-primary) - 10px);
+  width: calc(var(--height-primary) - 10px);
+  overflow: hidden;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  // margin-left: 4px;
+}
+
+/*88b.  .d88b.  d8b   db d888888b  .d8b.  d888888b d8b   db d88888b d8888b. 
+d8P  Y8 .8P  Y8. 888o  88 `~~88~~' d8' `8b   `88'   888o  88 88'     88  `8D 
+8P      88    88 88V8o 88    88    88ooo88    88    88V8o 88 88ooooo 88oobY' 
+8b      88    88 88 V8o88    88    88~~~88    88    88 V8o88 88~~~~~ 88`8b   
+Y8b  d8 `8b  d8' 88  V888    88    88   88   .88.   88  V888 88.     88 `88. 
+ `Y88P'  `Y88P'  VP   V8P    YP    YP   YP Y888888P VP   V8P Y88888P 88   */
+
+.fix-container {
+  position: fixed;
+  width: 100%;
+}
+
+/*b   db  .d8b.  db    db d888888b  d888b   .d8b.  d888888b d888888b  .d88b.  d8b   db 
+888o  88 d8' `8b 88    88   `88'   88' Y8b d8' `8b `~~88~~'   `88'   .8P  Y8. 888o  88 
+88V8o 88 88ooo88 Y8    8P    88    88      88ooo88    88       88    88    88 88V8o 88 
+88 V8o88 88~~~88 `8b  d8'    88    88  ooo 88~~~88    88       88    88    88 88 V8o88 
+88  V888 88   88  `8bd8'    .88.   88. ~8~ 88   88    88      .88.   `8b  d8' 88  V888 
+VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP   V*/
+
+.nav-wrapper {
+  position: relative;
+  z-index: 999;
+  height: var(--height-nav);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  background-color: var(--color-bg-header);
+  box-shadow: var(--shad-lighter);
+  // height is determined by content (currently - singularly dependent on the profile element)
+}
+
+.nav-wrapper .place-holder {
+  position: relative;
+  background-color: var(--color-bg-header);
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.nav > .header {
+  background-color: var(--color-bg-header);
+  padding: 10px;
+  flex-basis: 250px;
+}
+
+.logo {
+  background-color: var(--color-bg-test3);
+  height: 100%;
+  //margin-left: 10px;
+  font-size: 2.5rem;
+  font-family: "sam";
+  color: var(--color-f-tier3);
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.search {
+  height: 100%;
+  width: 250px;
+  border-radius: var(--height-primary); // ensures fully rounded corners
+  background-color: var(--color-bg-white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.nav .search {
+  padding-left: 6px;
+}
+
+.profile {
+  position: relative;
+  height: var(
+    --height-primary
+  ); // ok as long as parent (nav-bar) = var(nav-height)
+  width: var(--height-primary);
+  border-radius: 50%;
+  background-color: var(--color-bg-test1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+}
+
+/*8888. d888888b d888888b  .o88b. db   dD db    db      d8b   db  .d8b.  db    db 
+88'  YP `~~88~~'   `88'   d8P  Y8 88 ,8P' `8b  d8'      888o  88 d8' `8b 88    88 
+`8bo.      88       88    8P      88,8P    `8bd8'       88V8o 88 88ooo88 Y8    8P 
+  `Y8b.    88       88    8b      88`8b      88         88 V8o88 88~~~88 `8b  d8' 
+db   8D    88      .88.   Y8b  d8 88 `88.    88         88  V888 88   88  `8bd8'  
+`8888Y'    YP    Y888888P  `Y88P' YP   YD    YP         VP   V8P YP   YP    */
+
+.nav.fixed.locked {
+  transform: translateY(0);
+}
+
+// maybe not needed as class (or maybe add to generic resusable styles)
+.nav.fixed {
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.nav.transition {
+  transition: 0.3s ease;
+}
+
+// maybe not needed as class
+.sticky-hidden {
+  transform: translateY(-100%);
+}
+
+/*b   db  .d8b.  db    db      d888888b  .d88b.   d888b   d888b  db      d88888b 
+888o  88 d8' `8b 88    88      `~~88~~' .8P  Y8. 88' Y8b 88' Y8b 88      88'     
+88V8o 88 88ooo88 Y8    8P         88    88    88 88      88      88      88ooooo 
+88 V8o88 88~~~88 `8b  d8'         88    88    88 88  ooo 88  ooo 88      88~~~~~ 
+88  V888 88   88  `8bd8'          88    `8b  d8' 88. ~8~ 88. ~8~ 88booo. 88.     
+VP   V8P YP   YP    YP            YP     `Y88P'   Y888P   Y888P  Y88888P Y8888*/
+
+.nav-toggle {
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-bg-dark);
+  margin: 10px;
+  color: var(--color-bg-white);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-toggle .icon {
+  transform: rotate(90deg);
+  color: var(--color-bg-white);
+}
+
+.nav-toggle.locked .icon {
+  transform: rotate(-90deg);
+}
+
+.nav-toggler {
+  color: rgb(138, 138, 138);
+}
+
+.nav-toggler.locked {
+  color: var(--header-a);
+}
+
+/*8b  d88.  .d8b.  d888888b d8b   db 
+88'YbdP`88 d8' `8b   `88'   888o  88 
+88  88  88 88ooo88    88    88V8o 88 
+88  88  88 88~~~88    88    88 V8o88 
+88  88  88 88   88   .88.   88  V888 
+YP  YP  YP YP   YP Y888888P VP   V*/
+
+.main {
+  display: flex;
+  position: relative;
+  top: 0;
+  z-index: 999;
+}
+
+/*8888. d888888b d8888b. d88888b      .88b  d88. d88888b d8b   db db    db 
+88'  YP   `88'   88  `8D 88'          88'YbdP`88 88'     888o  88 88    88 
+`8bo.      88    88   88 88ooooo      88  88  88 88ooooo 88V8o 88 88    88 
+  `Y8b.    88    88   88 88~~~~~      88  88  88 88~~~~~ 88 V8o88 88    88 
+db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88 
+`8888Y' Y888888P Y8888D' Y88888P      YP  YP  YP Y88888P VP   V8P  Y888*/
+
+.side-menu-wrapper {
+  width: 250px; // orginal width
+  flex-shrink: 0;
+  transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+}
+
+.side-menu {
+  position: fixed; //not needed now
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  width: 250px; // orginal width
+  flex-shrink: 0;
+  height: 100vh;
+  background-color: var(--color-bg-sidemenu);
+  transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  //left: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: var(--shad-lighter);
+  font-size: 1.2rem;
+}
+
+.side-menu-wrapper.hidden {
+  //width: 58px;
+  width: calc(var(--height-primary) + var(--pad) * 2);
+}
+
+.side-menu.hidden {
+  //width: 58px;
+  width: calc(var(--height-primary) + var(--pad) * 2);
+}
+
+.side-menu > .clipper {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+  overflow: hidden;
+  z-index: 999;
+  // border: 1px solid black;
+}
+
+.side-menu > .clipper > .shad-bott {
+  margin-left: -10px;
+  margin-right: -10px;
+  box-shadow: var(--shad-lighter);
+
+  // border: 1px solid blue;
+}
+
+.header {
+  background-color: var(--color-bg-header);
+  padding: 10px;
+}
+
+.side-menu .header {
+  box-sizing: content-boxing;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header-inner {
+  border-radius: 5px;
+  display: flex;
+  height: var(--height-primary);
+}
+
+.ham {
+  // background-color: var(--color-bg-white);
+  background-color: var(--color-bg-test3);
+  margin-right: 10px;
+  width: var(--height-primary);
+  //border-color: #acced6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+  //height: var(--height-primary);
+  //width: var(--height-primary);
+  cursor: pointer;
+}
+
+// need hidden ham (nav) to provide additional
+
+.logo .text {
+  transform: translateY(2px);
+  width: 172px;
+  flex-shrink: 0;
+}
+
+.accordion::-webkit-scrollbar {
+  display: none;
+}
+
+.accordion {
+  position: relative;
+  flex-grow: 1;
+  // margin-top: 20px;
+  padding: 2px 10px 10px 10px;
+  overflow: scroll;
+  //top: 0px;
+  //bottom: 0;
+  width: 100%;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// Side-Menu Item Styling
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// space each item
+[class*="tier-"] {
+  margin: 10px 0;
+}
+
+// except for each contents last (do prevent doubling up with parents next sibling)
+[class*="tier-"]:last-child {
+  margin-bottom: 0;
+}
+
+.item-name {
+  height: var(--height-primary);
+  overflow: hidden;
+  // give all elements same border thickness for layout consistency (default set to transparent)
+  // border: 1px solid rgba(0, 0, 0, 0); extracted
+  // maybe move to separate style
+  cursor: pointer;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// Item Contents Transitions
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// ensure this rule is no more specific than (and is decalred before) .transitioning (v important)
+.item > .content {
+  overflow: hidden;
+  display: none;
+}
+
+.open > .content {
+  display: block;
+}
+
+.item > .transitioning {
+  transition: height 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  display: block;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// Item Tier styles
+
+//////////////////////////////////////////////////////////////////////////////////
+
+.tier-1 > .item-name {
+  background-color: var(--color-bg-tier1);
+  color: var(--color-f-tier1);
+  border-color: #8aa5ac;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
+}
+
+.tier-1 > .item-name > .icon:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.tier-2 > .item-name {
+  background-color: var(--color-bg-tier2);
+  color: var(--color-f-tier2);
+  border-color: #acced6;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
+}
+
+.tier-3 > .item-name {
+  background-color: var(--color-bg-tier3);
+  color: var(--color-f-tier3);
+  border-color: #acced6;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// Chevron Styles and Transitions
+
+//////////////////////////////////////////////////////////////////////////////////
+
+.rot90 {
+  transition: transform 0.07s linear;
+}
+
+.open > * > .rot90 {
+  transform: rotate(90deg);
+  transition: transform 0.07s linear;
+}
+
+// recenter to more intuitive center (always rotate parent container)
+.mai-chevron {
+  transform: translateX(15%);
+}
+
+/*888b.  .d8b.   d888b  d88888b      d8888b.  .d88b.  d8888b. db    db 
+88  `8D d8' `8b 88' Y8b 88'          88  `8D .8P  Y8. 88  `8D `8b  d8' 
+88oodD' 88ooo88 88      88ooooo      88oooY' 88    88 88   88  `8bd8'  
+88~~~   88~~~88 88  ooo 88~~~~~      88~~~b. 88    88 88   88    88    
+88      88   88 88. ~8~ 88.          88   8D `8b  d8' 88  .8D    88    
+88      YP   YP  Y888P  Y88888P      Y8888P'  `Y88P'  Y8888D'    */
+
+.page {
+  //position: absolute;
+  padding: 10px;
+  flex-grow: 1;
+  margin-top: 58px;
+  margin-bottom: 52px;
+  //margin-left: 60px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  // margin-bottom: 20px;
+  // border: 1px solid red;
+  // padding: 10px 10px;
+  // height: 600px;
+}
+
+.card {
+  font-size: 1.4rem;
+  width: 300px;
+  height: 400px;
+  // border: 1px solid rgb(148, 138, 138);
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  margin: 10px 10px;
+  box-shadow: var(--shad-lighter);
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.card .title {
+  background-color: #e8f4f5;
+  // background-color: var(--color-bg-test1);
+  padding: 20px;
+  color: #1a98a1;
+  font-weight: bold;
+}
+
+.card > .content {
+  padding: 20px;
+  padding-top: 10px;
+  line-height: 23px;
+  color: #1a98a1;
+}
+
+//test
+
+.target {
+  position: absolute;
+  z-index: 99999;
+  margin: 30px auto;
+  bottom: 20px;
+  border: solid black;
+  width: 500px;
+  height: 400px;
+}

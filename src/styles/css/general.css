@@ -1,0 +1,195 @@
+/*b   db  .d88b.  d8888b. .88b  d88.  .d8b.  db      d888888b .d8888. d88888b 
+888o  88 .8P  Y8. 88  `8D 88'YbdP`88 d8' `8b 88        `88'   88'  YP 88'     
+88V8o 88 88    88 88oobY' 88  88  88 88ooo88 88         88    `8bo.   88ooooo 
+88 V8o88 88    88 88`8b   88  88  88 88~~~88 88         88      `Y8b. 88~~~~~ 
+88  V888 `8b  d8' 88 `88. 88  88  88 88   88 88booo.   .88.   db   8D 88.     
+VP   V8P  `Y88P'  88   YD YP  YP  YP YP   YP Y88888P Y888888P `8888Y' Y8888*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*88b   db       .d88b.  d8888b.  .d8b.  db      .d8888. 
+88' Y8b 88      .8P  Y8. 88  `8D d8' `8b 88      88'  YP 
+88      88      88    88 88oooY' 88ooo88 88      `8bo.   
+88  ooo 88      88    88 88~~~b. 88~~~88 88        `Y8b. 
+88. ~8~ 88booo. `8b  d8' 88   8D 88   88 88booo. db   8D 
+ Y888P  Y88888P  `Y88P'  Y8888P' YP   YP Y88888P `8888*/
+html {
+  position: relative;
+  font-size: 70%;
+  color: var(--color-f-secondary);
+}
+
+body {
+  font-family: "proxima";
+  font-size: 1.1rem;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  background-position: top center;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0.3;
+}
+
+/*    db d888888b d888888b db      d888888b d888888b db    db 
+88    88 `~~88~~'   `88'   88        `88'   `~~88~~' `8b  d8' 
+88    88    88       88    88         88       88     `8bd8'  
+88    88    88       88    88         88       88       88    
+88b  d88    88      .88.   88booo.   .88.      88       88    
+~Y8888P'    YP    Y888888P Y88888P Y888888P    YP       */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-v {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-h {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-collapse {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.pad-l {
+  padding-left: 10px;
+}
+
+.pad-r {
+  padding-right: 10px;
+}
+
+.pad-v {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pad-h {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.marg-l {
+  margin-left: 10px;
+}
+
+.marg-r {
+  margin-right: 10px;
+}
+
+.marg4 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.marg-v {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.border {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.border-right {
+  box-sizing: content-box;
+  border-right: 1px solid white;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.shad-hov:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
+}
+
+/*    db  .d8b.  d8888b. d888888b  .d8b.  d8888b. db      d88888b .d8888. 
+88    88 d8' `8b 88  `8D   `88'   d8' `8b 88  `8D 88      88'     88'  YP 
+Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.   
+`8b  d8' 88~~~88 88`8b      88    88~~~88 88~~~b. 88      88~~~~~   `Y8b. 
+ `8bd8'  88   88 88 `88.   .88.   88   88 88   8D 88booo. 88.     db   8D 
+   YP    YP   YP 88   YD Y888888P YP   YP Y8888P' Y88888P Y88888P `8888*/
+:root {
+  --color-bg-header: #e8f4f5;
+  --color-bg-dark: #9cc2cc;
+  --color-bg-sidemenu: #ffffff;
+  --color-bg-white: #ffffff;
+  --color-f-primary: rgb(0, 0, 0);
+  --color-f-secondary: rgb(88, 88, 88);
+  --color-bg-tier1: #3282967c;
+  --color-bg-tier2: #6db7c97c;
+  --color-bg-tier3: #bce1eb7a;
+  --color-f-tier1: #4c6166;
+  --color-f-tier2: #3c636e;
+  --color-f-tier3: #467380;
+  --color-bg-test1: rgb(193, 221, 230);
+  --color-bg-test2: rgb(234, 240, 241);
+  --color-bg-test3: rgb(255, 255, 255);
+  --shad-bottom: 0 0px 10px rgba(0, 0, 0, 90%);
+  --shad-light: 0px 0px 10px rgba(0, 0, 0, 70%);
+  --shad-lighter: 0px 0px 10px rgba(0, 0, 0, 30%);
+  --pad: 10px;
+  --height-primary: 38px;
+  --height-nav: calc(var(--height-primary) + 2 * var(--pad));
+}
+
+/*8888b  .d88b.  d8b   db d888888b .d8888. 
+88'     .8P  Y8. 888o  88 `~~88~~' 88'  YP 
+88ooo   88    88 88V8o 88    88    `8bo.   
+88~~~   88    88 88 V8o88    88      `Y8b. 
+88      `8b  d8' 88  V888    88    db   8D 
+YP       `Y88P'  VP   V8P    YP    `8888*/
+@font-face {
+  font-family: "proxima";
+  src: url("../fonts/proxima.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sam";
+  src: url("../fonts/sam.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
