@@ -90,9 +90,7 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
 
 .profile {
   position: relative;
-  height: var(
-    --height-primary
-  ); // ok as long as parent (nav-bar) = var(nav-height)
+  height: var(--height-primary); // ok as long as parent (nav-bar) = var(nav-height)
   width: var(--height-primary);
   border-radius: 50%;
   background-color: var(--color-bg-test1);
@@ -412,45 +410,4 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
   // border: 1px solid red;
   // padding: 10px 10px;
   // height: 600px;
-}
-
-.card {
-  font-size: 1.4rem;
-  width: 300px;
-  height: 400px;
-  // border: 1px solid rgb(148, 138, 138);
-  border-radius: 10px;
-  background-color: white;
-  overflow: hidden;
-  margin: 10px 10px;
-  box-shadow: var(--shad-lighter);
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
-.card .title {
-  background-color: #e8f4f5;
-  // background-color: var(--color-bg-test1);
-  padding: 20px;
-  color: #1a98a1;
-  font-weight: bold;
-}
-
-.card > .content {
-  padding: 20px;
-  padding-top: 10px;
-  line-height: 23px;
-  color: #1a98a1;
-}
-
-//test
-
-.target {
-  position: absolute;
-  z-index: 99999;
-  margin: 30px auto;
-  bottom: 20px;
-  border: solid black;
-  width: 500px;
-  height: 400px;
 }

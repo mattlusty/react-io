@@ -7,7 +7,6 @@ VP   V8P  `Y88P'  88   YD YP  YP  YP YP   YP Y88888P Y888888P `8888Y' Y8888*/
 
 * {
   box-sizing: border-box;
-  color: purple;
 }
 
 body {
@@ -34,10 +33,11 @@ html {
   color: var(--color-f-secondary);
 }
 
-body {
+body,
+input {
   //height: 200vh;
   font-family: "proxima";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 // background
@@ -214,14 +214,14 @@ YP       `Y88P'  VP   V8P    YP    `8888*/
 
 @font-face {
   font-family: "proxima";
-  src: url("/styles/fonts/proxima.ttf") format("truetype");
+  src: url("../fonts/proxima.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "sam";
-  src: url("/styles/fonts/sam.ttf") format("truetype");
+  src: url("../fonts/sam.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,0 +1,25 @@
+.clients label {
+  display: inline-block;
+  width: 150px;
+}
+
+.clients .input-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 0;
+}
+
+.clients .input-item input:focus {
+  outline: none;
+}
+
+.clients input {
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 5px;
+  height: 2.2rem;
+  padding: 5px;
+  flex-grow: 1;
+  display: inline-block;
+  width: 50px;
+  color: #646464;
+}

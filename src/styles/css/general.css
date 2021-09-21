@@ -31,9 +31,10 @@ html {
   color: var(--color-f-secondary);
 }
 
-body {
+body,
+input {
   font-family: "proxima";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 body::before {

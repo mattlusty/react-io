@@ -1,0 +1,48 @@
+.clients {
+  font-size: 1.5rem;
+  // border: 1px solid rgb(148, 138, 138);
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shad-lighter);
+}
+
+.clients .client-list .title {
+  font-size: 1.4rem;
+  background-color: #e8f4f5;
+  padding: 20px;
+  color: #1a98a1;
+  font-weight: bold;
+}
+
+.clients .client-list > .content {
+  padding: 10px;
+  padding-top: 10px;
+  line-height: 23px;
+  color: #1a98a1;
+}
+
+.clients .client-list .group {
+  background-color: rgb(243, 243, 243);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
+}
+
+.clients .client-list .group:last-child {
+  margin-bottom: 0;
+}
+
+.clients .client-list .group2 {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.clients .client-list form {
+  display: flex;
+  justify-content: space-between;
+}

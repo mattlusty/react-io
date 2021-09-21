@@ -1,0 +1,47 @@
+.clients {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shad-lighter);
+}
+
+.clients .filters .title {
+  font-size: 1.4rem;
+  background-color: #e8f4f5;
+  padding: 20px;
+  color: #1a98a1;
+  font-weight: bold;
+}
+
+.clients .filters > .content {
+  padding-top: 10px;
+  line-height: 23px;
+  color: #1a98a1;
+  padding: 8px;
+}
+
+.clients .filters .group {
+  background-color: #f3f3f3;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
+}
+
+.clients .filters .group:last-child {
+  margin-bottom: 0;
+}
+
+.clients .filters .group2 {
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.clients .filters form {
+  display: flex;
+  justify-content: space-between;
+}
