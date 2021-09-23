@@ -1,23 +1,20 @@
-import React, { Component } from 'react';
-import Item from './item';
+import React, { Component } from "react";
+import Item from "./item";
 
 class AccordionMenu extends Component {
-  state = {
-  
-  }
+  state = {};
 
-  render () {
+  render() {
     return (
       <div className="accordion">
-        {content.map((item)=>{
-          return (
-            <Item key={item.label} item={item} level={1} />
-          )
+        {content.map((item) => {
+          return <Item key={item.label} item={item} level={1} />;
         })}
-      </div>  
-  )}
+      </div>
+    );
+  }
 }
-  
+
 export default AccordionMenu;
 
 let content = [
@@ -25,308 +22,253 @@ let content = [
     label: "Home",
     icon: "home",
     content: [
-      { 
+      {
         label: "Dashboards",
         content: [
-          { 
+          {
             label: "Adviser",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Organiser",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Admin",
-            content: [ 
-            ]
-          }
-        ]
+            content: [],
+          },
+        ],
       },
-      { 
+      {
         label: "Recent Items",
-        content: [ 
-          { 
+        content: [
+          {
             label: "Worked on Items",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Document Queue",
-            content: [ 
-            ]
-          }
-        ]
-      },
-      { 
-        label: "Library",
-        content: [ 
-          { 
-            label: "My Documents",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
-            label: "Documents",
-            content: [ 
-            ]
-          }
-        ]
+        ],
       },
-      { 
+      {
+        label: "Library",
+        content: [
+          {
+            label: "My Documents",
+            content: [],
+          },
+          {
+            label: "Documents",
+            content: [],
+          },
+        ],
+      },
+      {
         label: "Uploads",
-        content: [ 
-        ]
-      }
-    ]
-  }, 
+        content: [],
+      },
+    ],
+  },
   {
     label: "Adviser Workplace",
     icon: "user",
     content: [
-      { 
-        label: "Clients",
-        content: []
+      {
+        label: "Clients Search",
+        content: [],
       },
-      { 
-        label: "Leads",
-        content: [ 
-        ]
+      {
+        label: "Leads Search",
+        content: [],
       },
-      { 
+      {
+        label: "Plans Search",
+        content: [],
+      },
+      {
         label: "Sales",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Accounts",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Opportunities",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Fund Analysis",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Communication",
-        content: [ 
-        ]
-      }
-    ]
+        content: [],
+      },
+    ],
   },
-  { 
+  {
     label: "Income",
     icon: "pound",
-    content: [ 
-      { 
+    content: [
+      {
         label: "Provider Statements",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Cash Receipts",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Introducers",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Users",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Clients",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Adviser",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Administration",
-        content: [ 
-        ]
-      }
-    ]
+        content: [],
+      },
+    ],
   },
-  { 
+  {
     label: "Compliance",
-    content: [ 
-      { 
+    content: [
+      {
         label: "File Checking",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Advisers",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Complaints",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Breaches",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "T&C Coaches",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Author",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Event List",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Administration",
-        content: [ 
-        ]
-      }
-    ]
+        content: [],
+      },
+    ],
   },
-  { 
+  {
     label: "Administration",
-    content: [ 
-      { 
+    content: [
+      {
         label: "Manage Users",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Oranisation",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Group Reference Data",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Security",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Settings",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Documents",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Automation",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Templates",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Workflows",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "Document Designer",
-        content: [ 
-        ]
-      }
-    ]
+        content: [],
+      },
+    ],
   },
-  { 
+  {
     label: "Organiser",
-    content: [ 
-      { 
+    content: [
+      {
         label: "Tasks",
-        content: [ 
-          { 
+        content: [
+          {
             label: "My Tasks",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Queue Tasks",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Activity Search",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Orphan Calls",
-            content: [ 
-            ]
+            content: [],
           },
-          { 
+          {
             label: "Orphan Emails",
-            content: [ 
-            ]
-          }
-        ]
+            content: [],
+          },
+        ],
       },
-      { 
+      {
         label: "Diary",
-        content: [ 
-        ]
+        content: [],
       },
-      { 
+      {
         label: "My Time",
-        content: [ 
-        ]
-      }
-    ]
+        content: [],
+      },
+    ],
   },
-  { 
+  {
     label: "MI Reports",
-    content: [ 
-    ]
+    content: [],
   },
-  { 
+  {
     label: "iO Store",
-    content: [ 
-    ]
-  }
-]
-
-let item = 
-{ 
-  label: "Boo",
-  content: [ 
-  ]
-}
-
-
-
-
+    content: [],
+  },
+];

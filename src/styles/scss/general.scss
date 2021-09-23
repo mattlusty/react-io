@@ -20,6 +20,10 @@ ul {
   padding: 0px;
 }
 
+th {
+  text-align: unset;
+}
+
 /*88b   db       .d88b.  d8888b.  .d8b.  db      .d8888. 
 88' Y8b 88      .8P  Y8. 88  `8D d8' `8b 88      88'  YP 
 88      88      88    88 88oooY' 88ooo88 88      `8bo.   
@@ -37,7 +41,7 @@ body,
 input {
   //height: 200vh;
   font-family: "proxima";
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 // background

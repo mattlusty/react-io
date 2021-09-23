@@ -1,5 +1,4 @@
 :root {
-  // Blue Theme
   --color-dark-grey: #dadada;
   --color-rows-dark-grey: rgb(243, 243, 243);
   --color-s-dark-grey: #eeeeee;
@@ -13,10 +12,7 @@ table {
   border-spacing: 0;
   padding: 8px;
   padding-bottom: 0;
-  // border-collapse: collapse;
 }
-
-// Table Header
 
 thead {
   height: 40px;
@@ -27,12 +23,6 @@ th {
   padding: 10px;
 }
 
-table .checker {
-  // dont give td with checkbox any display: flex (causes layout issues - and dont think we need it)
-  // width: 0px; // has the effect of fitting to content
-  // width: fit-content; // has no effect??
-}
-
 table input {
   width: 16px;
   height: 16px;
@@ -41,8 +31,6 @@ table input {
 thead th {
   background-color: var(--color-rows-dark-grey);
 }
-
-// Table Header Border
 
 thead th:first-child {
   border-radius: 5px 0 0 5px;
@@ -61,8 +49,6 @@ thead th:last-child {
   border-left: 0;
 }
 
-// Table Rows Border
-
 tbody td:first-child {
   border-radius: 5px 0 0 5px;
   border: 1px solid rgba(255, 0, 0, 0);
@@ -80,8 +66,6 @@ tbody td:last-child {
   border-left: 0;
 }
 
-// Table body
-
 td {
   padding: 10px;
   color: var(--color-v-dark-grey);
@@ -91,12 +75,13 @@ tr:nth-child(even) {
   background-color: var(--color-rows-dark-grey);
 }
 
-// TABLE CONTROLS (ACTIONS AND PAGINATOR)
+.table-controls {
+  padding: 10px 8px 8px 8px;
+}
 
 .table-controls {
   display: flex;
   justify-content: space-between;
-  padding: 10px 8px 8px 8px;
 }
 
 .action {
@@ -105,10 +90,6 @@ tr:nth-child(even) {
   border-radius: 3px;
   background-color: var(--color-rows-dark-grey);
   color: var(--color-v-dark-grey);
-}
-
-.action:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
 }
 
 .delete {
@@ -121,8 +102,37 @@ tr:nth-child(even) {
 
 .space {
   border: 1px solid var(--color-dark-grey);
-  // background-color: var(--color-rows-dark-grey);
   border-radius: 3px;
   margin-right: 10px;
   flex-grow: 1;
+}
+
+.paginator {
+  display: inline;
+}
+
+.paginator > * {
+  background-color: var(--color-rows-dark-grey);
+  color: var(--color-v-dark-grey);
+  height: 43px;
+  display: inline-block;
+  border: 1px solid var(--color-dark-grey);
+  justify-content: space-evenly;
+}
+
+.previous,
+.next {
+  width: 43px;
+  border-radius: 3px;
+}
+
+.pages {
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.pages span {
+  padding: 4px;
 }

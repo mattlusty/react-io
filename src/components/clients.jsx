@@ -1,68 +1,133 @@
-import React, { Component } from 'react'
-import "../styles/css/clients.css";
-import InputItem from './input-item';
-import ClientList from './client-list';
+import React, { Component } from "react";
+import "../styles/css/card.css";
+import InputItem from "./input-item";
+import ClientList from "./client-list";
 
 class Clients extends Component {
-  state =
-  {}
+  state = {};
 
   handleChange = (event) => {
-    this.setState({value:event.target.value})
-  }
+    this.setState({ value: event.target.value });
+  };
 
   render() {
     return (
-      <div className="clients">
-        <div className="filters">
+      <div className="card">
+        <div className="section">
           <div className="title">Client Search Filters</div>
           <div className="content">
             <form>
-              <div className="group2">
-                <div className="group personal">
-                  <InputItem name="firstName" label="First Name"/>
-                  <InputItem name="middleName" label="Middle Name"/>
-                  <InputItem name="lastName" label="Last Name"/>
-                </div>
-                <div className="group corporate">
-                  <InputItem name="corporateName" label="Corporate Name"/>
-                </div>
-              </div>  
-              <div className="group2">
-                <div className="group reference">
-                  <InputItem name="primeRef" label="Primary Reference"/>
-                </div>
-                <div className="group otherPersonal">
-                  <InputItem name="email" label="Email"/>
-                  <InputItem name="phone" label="Phone Number"/>
-                  <InputItem name="postcode" label="Post Code"/>
-                </div>
-              </div>
-              <div className="group2">
-                <div className="group servicing">
-                  <InputItem name="adviser" label="Adviser"/>
-                  <InputItem name="serviceStatus" label="Service Status"/>
-                  <InputItem name="organisationalUnit" label="Organisational Unit"/>
-                  <InputItem name="creditedGroup" label="Credited Group"/>
-                </div>     
-              </div>
+              {inputs.map((block) => {
+                return (
+                  <div key={Math.random()} className="group2">
+                    {block.map((group) => {
+                      return (
+                        <div key={Math.random()} className={`group ${group.groupName}`}>
+                          {group.fields.map((field) => {
+                            return <InputItem key={Math.random()} name={field.name} label={field.label} />;
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })}
             </form>
           </div>
-        </div>   
-        <ClientList/>
-      </div>                    
-    )
+        </div>
+        <div className="section">
+          <div className="title">Client Search Results</div>
+          <div className="content">
+            <ClientList />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
-export default Clients
+export default Clients;
 
-// Fetch Data from API
+// Input fields
 
-let client =
-{
-  name: "Tony Iony",
-  dob: "19/01/2000",
-  email: "tony@gmail.com",
-  adviser: "Richard Smith"
-}
+let inputs = [
+  [
+    {
+      groupName: "names",
+      fields: [
+        {
+          name: "firstName",
+          label: "First Name",
+        },
+        {
+          name: "lastNameName",
+          label: "Last Name",
+        },
+        {
+          name: "middleName",
+          label: "Middle Name",
+        },
+      ],
+    },
+    {
+      groupName: "corporate",
+      fields: [
+        {
+          name: "corporateName",
+          label: "Corporate Name",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      groupName: "reference",
+      fields: [
+        {
+          name: "primeRef",
+          label: "Primary Ref",
+        },
+      ],
+    },
+    {
+      groupName: "contact",
+      fields: [
+        {
+          name: "email",
+          label: "Email",
+        },
+        {
+          name: "phoneNo",
+          label: "Phone Number",
+        },
+        {
+          name: "postcode",
+          label: "Postcode",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      groupName: "servicing",
+      fields: [
+        {
+          name: "adviser",
+          label: "Adviser",
+        },
+        {
+          name: "serviceStatus",
+          label: "Service Status",
+        },
+        {
+          name: "organisationalUnit",
+          label: "Organisational Unit",
+        },
+        {
+          name: "creditedGroup",
+          label: "Credited Group",
+        },
+      ],
+    },
+  ],
+];

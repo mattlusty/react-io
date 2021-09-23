@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { forcePageReflow } from "../scripts/utils.js";
 
 class Item extends Component {
   state = {
@@ -11,7 +12,7 @@ class Item extends Component {
   }
 
   toggle = () => {
-    if (this.props.item.content.length == 0) {
+    if (this.props.item.content.length === 0) {
       return;
     }
     this.setState({ open: !this.state.open });
@@ -25,11 +26,11 @@ class Item extends Component {
     } else if (this.state.phase === 0) {
       this.setInitialHeight();
     } else if (this.state.phase === 1) {
-      this.forcePageReflow();
+      forcePageReflow(this.content);
     } else if (this.state.phase === 2) {
       this.setFinalHeight();
     } else {
-      return
+      return;
     }
     this.setState({ phase: this.state.phase + 1 });
   }
@@ -55,10 +56,6 @@ class Item extends Component {
     }
   }
 
-  forcePageReflow() {
-    let x = this.content.offsetWidth;
-  }
-
   setFinalHeight() {
     this.setState({ height: this.state.finalHeight });
   }
@@ -73,8 +70,8 @@ class Item extends Component {
     });
   }
 
-  render () {
-    let itemNameClasses = `item tier-${this.props.level} ${this.state.open ? "open" : ""}`
+  render() {
+    let itemNameClasses = `item tier-${this.props.level} ${this.state.open ? "open" : ""}`;
     let itemContentClasses = `content rounded ${this.state.transitioning ? "transitioning" : ""} ${
       this.state.open ? "open" : ""
     }`;
@@ -91,14 +88,12 @@ class Item extends Component {
           </div>
         </div>
         <div className={itemContentClasses} style={{ height: this.state.height }} ref={this.myRef}>
-          {this.props.item.content.map((item)=>{
-            return (
-              <Item key={item.label} item={item} level={this.props.level + 1}></Item>
-            ) 
+          {this.props.item.content.map((item) => {
+            return <Item key={item.label} item={item} level={this.props.level + 1}></Item>;
           })}
         </div>
       </div>
-    )
+    );
   }
 }
 

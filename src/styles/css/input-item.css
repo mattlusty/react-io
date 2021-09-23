@@ -1,19 +1,19 @@
-.clients label {
+label {
   display: inline-block;
   width: 150px;
 }
 
-.clients .input-item {
+.input-item {
   display: flex;
   align-items: center;
   margin: 10px 0px 10px 0;
 }
 
-.clients .input-item input:focus {
+.input-item input:focus {
   outline: none;
 }
 
-.clients input {
+input {
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   height: 2.2rem;

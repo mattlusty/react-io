@@ -1,5 +1,4 @@
-.clients {
-  font-size: 1.5rem;
+.card {
   border-radius: 10px;
   background-color: white;
   overflow: hidden;
@@ -7,7 +6,11 @@
   box-shadow: var(--shad-lighter);
 }
 
-.clients .filters .title {
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card .section .title {
   font-size: 1.4rem;
   background-color: #e8f4f5;
   padding: 20px;
@@ -15,14 +18,14 @@
   font-weight: bold;
 }
 
-.clients .filters > .content {
+.card .section .content {
   padding-top: 10px;
   line-height: 23px;
   color: #1a98a1;
   padding: 8px;
 }
 
-.clients .filters .group {
+.card .section .group {
   background-color: #f3f3f3;
   margin-bottom: 16px;
   border-radius: 5px;
@@ -32,16 +35,16 @@
   display: block;
 }
 
-.clients .filters .group:last-child {
+.card .section .group:last-child {
   margin-bottom: 0;
 }
 
-.clients .filters .group2 {
+.card .section .group2 {
   flex-grow: 1;
   padding: 8px;
 }
 
-.clients .filters form {
+.card .section form {
   display: flex;
   justify-content: space-between;
 }
