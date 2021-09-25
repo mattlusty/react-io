@@ -6,28 +6,26 @@
   border-radius: 3px;
 }
 
-.pageSize .wrapper {
+.pageSize .growingInput {
   display: inline-grid;
   align-items: center;
-  // border: 1px solid var(--color-dark-grey);
-
   margin-right: 5px;
-  // padding: 5px;
 
   &::after,
   input {
-    box-sizing: border-box;
     grid-area: 1 / 1;
-    border: none;
-    font: inherit; // needed otherwise extra width added to end of input box
     padding: 5px;
-    border-radius: 5px;
-    color: var(--color-v-dark-grey);
     border: 1px solid var(--color-dark-grey);
+  }
+
+  input {
+    color: var(--color-v-dark-grey);
+    border-radius: 5px;
     text-align: center;
   }
+
   &::after {
-    content: attr(data-value); // need to fix
+    content: attr(data-value); // key to enabling the growing (invisibly non-input element)
     visibility: hidden;
     white-space: pre-wrap; // stops the content disappearing slightly off sides
   }

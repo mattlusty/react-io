@@ -6,26 +6,26 @@
   border-radius: 3px;
 }
 
-.pageSize .wrapper {
+.pageSize .growingInput {
   display: inline-grid;
   align-items: center;
   margin-right: 5px;
 }
 
-.pageSize .wrapper::after,
-.pageSize .wrapper input {
-  box-sizing: border-box;
+.pageSize .growingInput::after,
+.pageSize .growingInput input {
   grid-area: 1 / 1;
-  border: none;
-  font: inherit;
   padding: 5px;
-  border-radius: 5px;
-  color: var(--color-v-dark-grey);
   border: 1px solid var(--color-dark-grey);
+}
+
+.pageSize .growingInput input {
+  color: var(--color-v-dark-grey);
+  border-radius: 5px;
   text-align: center;
 }
 
-.pageSize .wrapper::after {
+.pageSize .growingInput::after {
   content: attr(data-value);
   visibility: hidden;
   white-space: pre-wrap;

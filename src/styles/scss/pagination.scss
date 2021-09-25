@@ -8,13 +8,13 @@
   --color-vvv-dark-grey: #5f5f5f;
 }
 
-.paginator {
+.pagination {
   display: inline;
   display: flex;
   align-items: center;
 }
 
-.paginator > * {
+.pagination > * {
   background-color: var(--color-rows-dark-grey);
   color: var(--color-v-dark-grey);
   height: 43px;

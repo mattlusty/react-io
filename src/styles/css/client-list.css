@@ -77,7 +77,6 @@ tr:nth-child(even) {
 
 .table-controls {
   display: flex;
-  justify-content: space-between;
   padding: 10px 8px 8px 8px;
 }
 

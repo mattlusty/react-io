@@ -17,8 +17,8 @@ class growingInput extends Component {
 
   render() {
     return (
-      <div className="wrapper" data-value={this.state.inputValue}>
-        <input id="pageSize" type="text" size="1" onInput={this.onInput} />
+      <div className="growingInput" data-value={this.state.inputValue}>
+        <input id={this.props.name} type="text" size="1" onInput={this.onInput} />
       </div>
     );
   }

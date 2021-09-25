@@ -10,12 +10,20 @@
   margin-bottom: 0;
 }
 
-.card .section .title {
-  font-size: 1.4rem;
+.card .section .strip {
+  display: flex;
+  padding: 10px 10px 10px 20px;
   background-color: #e8f4f5;
-  padding: 20px;
+  justify-content: space-between;
+}
+
+.card .section .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
   color: #1a98a1;
   font-weight: bold;
+  height: 35px;
 }
 
 .card .section .content {

@@ -1,20 +1,60 @@
 import React, { Component } from "react";
+import { range } from "../scripts/utils.js";
 import "../styles/css/card.css";
+import clients from "../data/clients.js";
 import InputItem from "./input-item";
-import ClientList from "./client-list";
+import ClientListTable from "./client-list-table";
+import ClientListTableControls from "./client-list-table-controls";
+
+import Pagination from "./pagination";
 
 class Clients extends Component {
-  state = {};
+  state = {
+    itemsCount: clients.length,
+    pageSize: 8,
+    currentPage: 1,
+  };
 
-  handleChange = (event) => {
-    this.setState({ value: event.target.value });
+  constructor(props) {
+    super(props);
+    let pages = this.getPages(this.state.itemsCount, this.state.pageSize);
+    this.state.pages = pages;
+    this.state.pagesCount = pages.length;
+    this.state.pageClients = this.getPageClients(this.state.currentPage);
+  }
+
+  // correct place
+  getPageClients = (page) => {
+    let startClient = (page - 1) * this.state.pageSize;
+    let endClient = startClient + this.state.pageSize;
+    return clients.slice(startClient, endClient);
+  };
+
+  // correct place
+  getPages = (itemsCount, pageSize) => {
+    let fullPagesCount = Math.trunc(itemsCount / pageSize);
+    let itemsRemainder = itemsCount % pageSize;
+    let pagesCount = itemsRemainder ? fullPagesCount + 1 : fullPagesCount;
+    let pages = range(1, pagesCount);
+    return pages;
+  };
+
+  // correct place
+  handlePageChange = (page) => {
+    if (page === 0 || page > this.state.pagesCount || page === ". . .") {
+      return;
+    }
+    this.setState({ currentPage: page });
+    this.setState({ pageClients: this.getPageClients(page) });
   };
 
   render() {
     return (
       <div className="card">
         <div className="section">
-          <div className="title">Client Search Filters</div>
+          <div className="strip">
+            <div className="title">Client Search Filters</div>
+          </div>
           <div className="content">
             <form>
               {inputs.map((block) => {
@@ -36,9 +76,27 @@ class Clients extends Component {
           </div>
         </div>
         <div className="section">
-          <div className="title">Client Search Results</div>
+          <div className="strip">
+            <div className="title">Client Search Results</div>
+            <Pagination
+              itemsCount={this.state.itemsCount}
+              pageSize={this.state.pageSize}
+              pagesCount={this.state.pagesCount}
+              currentPage={this.state.currentPage}
+              pages={this.state.pages}
+              onPageChange={this.handlePageChange}
+            />
+          </div>
           <div className="content">
-            <ClientList />
+            <ClientListTable pageClients={this.state.pageClients} />
+            <ClientListTableControls
+              itemsCount={this.state.itemsCount}
+              pageSize={this.state.pageSize}
+              pagesCount={this.state.pagesCount}
+              currentPage={this.state.currentPage}
+              pages={this.state.pages}
+              onPageChange={this.handlePageChange}
+            />
           </div>
         </div>
       </div>

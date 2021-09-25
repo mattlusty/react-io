@@ -7,6 +7,7 @@ class Card extends Component {
   render() {
     return (
       <div className="card">
+        <div className="strip"></div>
         <div className="title">{this.props.card.title}</div>
         <div className="content">
           <ul>
