@@ -2,36 +2,46 @@ import React, { Component } from "react";
 import "../styles/css/client-list.css";
 import Pagination from "./pagination";
 import { range } from "../scripts/utils.js";
+import clients from "../data/clients.js";
 
 class ClientList extends Component {
   state = {
-    itemsCount: 35,
-    pageSize: 5,
-    currentPage: 2,
+    itemsCount: clients.length,
+    pageSize: 8,
+    currentPage: 1,
   };
 
   constructor(props) {
     super(props);
     this.state.pages = this.getPages(this.state.itemsCount, this.state.pageSize);
     this.state.pagesCount = this.state.pages.length;
+    this.state.pageClients = this.getPageClients(this.state.currentPage);
   }
 
+  getPageClients = (page) => {
+    let startClient = (page - 1) * this.state.pageSize;
+    let endClient = startClient + this.state.pageSize;
+    return clients.slice(startClient, endClient);
+  };
+
   getPages = (itemsCount, pageSize) => {
-    // this.pagesCount = this.state.itemsCount / this.state.pageSize;
-    // this.pages = range(1, this.pagesCount);
-    // this.pagesCount = pages.length;
-    let pagesCountDecimal = itemsCount / pageSize;
-    let pages = range(1, pagesCountDecimal);
-    // let pagesCount = pages.length;
+    let fullPagesCount = Math.trunc(itemsCount / pageSize);
+    let itemsRemainder = itemsCount % pageSize;
+    let pagesCount = itemsRemainder ? fullPagesCount + 1 : fullPagesCount;
+    let pages = range(1, pagesCount);
     return pages;
   };
 
   handlePageChange = (page) => {
-    console.log("PAGE: ", page);
+    console.log("this.state.pagesCount: ", this.state.pagesCount);
+    console.log("page: ", page);
     if (page === 0 || page > this.state.pagesCount || page === ". . .") {
       return;
     }
+    console.log("here");
     this.setState({ currentPage: page });
+    this.setState({ pageClients: this.getPageClients(page) });
+    console.log("set pageClients: ", this.getPageClients(page));
   };
 
   render() {
@@ -54,9 +64,9 @@ class ClientList extends Component {
             </tr>
           </thead>
           <tbody>
-            {clients.map((client) => {
+            {this.state.pageClients.map((client) => {
               return (
-                <tr key={client.ref}>
+                <tr key={Math.random()}>
                   <td className="checker">
                     <input type="checkbox" />
                   </td>
@@ -92,68 +102,3 @@ class ClientList extends Component {
 }
 
 export default ClientList;
-
-// Fetch Data from API
-
-let clients = [
-  {
-    ref: 9998388,
-    firstName: "Tony",
-    lastName: "Iona-phillapioni",
-    middleName: "Daisy",
-    dob: "19/01/2000",
-    email: "tonyioniphilipioni@dingdandongo.com",
-    adviser: "Richard Smith",
-    creditedGroup: "Opal",
-  },
-  {
-    ref: 7762429,
-    firstName: "Janey",
-    lastName: "Louise",
-    middleName: "Meek",
-    dob: "18/01/1987",
-    email: "janey@gmail.com",
-    adviser: "Richard Smith",
-    creditedGroup: "Opal",
-  },
-  {
-    ref: 1164993,
-    firstName: "Bob",
-    lastName: "Dylan",
-    middleName: "Bobby",
-    dob: "12/12/1950",
-    email: "bobby@gmail.com",
-    adviser: "Sue Davies",
-    creditedGroup: "Opal",
-  },
-  {
-    ref: 7288523,
-    firstName: "Enola",
-    lastName: "Holmes",
-    middleName: "Fiona",
-    dob: "18/04/1999",
-    email: "enola@gmail.com",
-    adviser: "Richard Smith",
-    creditedGroup: "Opal",
-  },
-  {
-    ref: 74837165,
-    firstName: "Derrick",
-    lastName: "Hayes",
-    middleName: "Junior",
-    dob: "09/03/1989",
-    email: "hayes@gmail.com",
-    adviser: "Richard Smith",
-    creditedGroup: "Opal",
-  },
-  {
-    ref: 7726432,
-    firstName: "Sonny",
-    lastName: "Reeves",
-    middleName: "Jim",
-    dob: "03/05/1990",
-    email: "sonny@gmail.com",
-    adviser: "Sue Davies",
-    creditedGroup: "Opal",
-  },
-];

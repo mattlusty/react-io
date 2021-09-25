@@ -1,0 +1,36 @@
+.pageSize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.pageSize .wrapper {
+  display: inline-grid;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.pageSize .wrapper::after,
+.pageSize .wrapper input {
+  box-sizing: border-box;
+  grid-area: 1 / 1;
+  border: none;
+  font: inherit;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--color-v-dark-grey);
+  border: 1px solid var(--color-dark-grey);
+  text-align: center;
+}
+
+.pageSize .wrapper::after {
+  content: attr(data-value);
+  visibility: hidden;
+  white-space: pre-wrap;
+}
+
+.pageSize input:focus {
+  outline: none;
+}

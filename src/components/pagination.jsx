@@ -1,7 +1,21 @@
 import React, { Component } from "react";
 import "../styles/css/pagination.css";
+import GrowingInput from "./growingInput";
 
 class Pagination extends Component {
+  state = {
+    inputValue: "",
+  };
+
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+
+  onInput = (e) => {
+    this.setState({ inputValue: e.target.value });
+  };
+
   render() {
     let n = this.props.pagesCount;
     let pages;
@@ -27,8 +41,15 @@ class Pagination extends Component {
       }
     }
     pages = this.props.pages;
+    console.log(pages);
     return (
       <div className="paginator">
+        <div className="pageSize">
+          <div>
+            <GrowingInput />
+            <label htmlFor="pageSize">Results per page</label>
+          </div>
+        </div>
         <div className="previous" onClick={() => this.props.onPageChange(this.props.currentPage - 1)}>
           <div>&lt;</div>
         </div>

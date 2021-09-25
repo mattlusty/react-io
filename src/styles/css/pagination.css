@@ -30,6 +30,10 @@
   align-items: center;
 }
 
+.previous {
+  margin-left: 10px;
+}
+
 .previous:hover,
 .next:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);

@@ -1,4 +1,4 @@
-label {
+.input-item label {
   display: inline-block;
   width: 150px;
 }
@@ -13,7 +13,7 @@ label {
   outline: none;
 }
 
-input {
+.input-item input {
   border: 1px solid rgb(223, 223, 223);
   border-radius: 5px;
   height: 2.2rem;
