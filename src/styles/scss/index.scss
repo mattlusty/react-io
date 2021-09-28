@@ -49,6 +49,7 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
   width: 100vw;
   background-color: var(--color-bg-header);
   box-shadow: var(--shad-lighter);
+  height: 58px;
   // height is determined by content (currently - singularly dependent on the profile element)
 }
 
@@ -105,15 +106,15 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
 db   8D    88      .88.   Y8b  d8 88 `88.    88         88  V888 88   88  `8bd8'  
 `8888Y'    YP    Y888888P  `Y88P' YP   YD    YP         VP   V8P YP   YP    */
 
-.nav.fixed.locked {
-  transform: translateY(0);
-}
-
 // maybe not needed as class (or maybe add to generic resusable styles)
 .nav.fixed {
   position: fixed;
   top: 0;
   transform: translateY(-100%);
+}
+
+.nav.fixed.locked {
+  transform: translateY(0);
 }
 
 .nav.transition {

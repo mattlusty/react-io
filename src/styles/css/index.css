@@ -44,6 +44,7 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
   width: 100vw;
   background-color: var(--color-bg-header);
   box-shadow: var(--shad-lighter);
+  height: 58px;
 }
 
 .nav-wrapper .place-holder {
@@ -97,14 +98,14 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
   `Y8b.    88       88    8b      88`8b      88         88 V8o88 88~~~88 `8b  d8' 
 db   8D    88      .88.   Y8b  d8 88 `88.    88         88  V888 88   88  `8bd8'  
 `8888Y'    YP    Y888888P  `Y88P' YP   YD    YP         VP   V8P YP   YP    */
-.nav.fixed.locked {
-  transform: translateY(0);
-}
-
 .nav.fixed {
   position: fixed;
   top: 0;
   transform: translateY(-100%);
+}
+
+.nav.fixed.locked {
+  transform: translateY(0);
 }
 
 .nav.transition {

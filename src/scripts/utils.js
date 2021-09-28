@@ -1,5 +1,4 @@
 function range(from, to) {
-  console.log("from -- to: ", from + " -- " + to);
   let result = [];
   from = Math.trunc(from);
   to = Math.trunc(to);

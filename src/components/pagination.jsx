@@ -19,7 +19,6 @@ class Pagination extends Component {
   };
 
   render() {
-    console.log("THIS CURRENT PAGE: ", this.props.currentPage);
     return (
       <div className="pagination">
         <div className="pageSize">

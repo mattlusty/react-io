@@ -28,24 +28,7 @@ class App extends Component {
   onClick = () => {
     let wasLocked = this.state.nav.locked;
     let scroll = window.scrollY;
-
-    if (scroll === 0) {
-      this.setState((prevState) => ({
-        nav: { ...prevState.nav, fixed: !prevState.nav.fixed, locked: !prevState.nav.fixed },
-      }));
-    } else if (scroll <= 58) {
-      if (!wasLocked) {
-        this.setState(
-          (prevState) => ({ nav: { ...prevState.nav, fixed: true, translate: scroll } }),
-          () => {
-            forcePageReflow(this.state.nav.element);
-            this.setState({ nav: { ...this.state.nav, transition: true, translate: null, locked: true } }); // set transition
-          }
-        );
-      } else {
-        this.setState({ nav: { ...this.state.nav, transition: true, translate: scroll, locked: false } });
-      }
-    } else {
+    if (scroll > 58) {
       if (!wasLocked) {
         this.setState(
           (prevState) => ({ nav: { ...prevState.nav, fixed: true } }),
@@ -56,6 +39,22 @@ class App extends Component {
         );
       } else {
         this.setState((prevState) => ({ nav: { ...this.state.nav, transition: true, locked: false } }));
+      }
+    } else {
+      if (scroll === 0) {
+        this.setState((prevState) => ({ nav: { ...prevState.nav, fixed: !prevState.nav.fixed } }));
+      } else {
+        if (!wasLocked) {
+          this.setState(
+            (prevState) => ({ nav: { ...prevState.nav, fixed: true, translate: scroll } }),
+            () => {
+              forcePageReflow(this.state.nav.element);
+              this.setState({ nav: { ...this.state.nav, transition: true, translate: null, locked: true } }); // set transition
+            }
+          );
+        } else {
+          this.setState({ nav: { ...this.state.nav, transition: true, translate: scroll, locked: false } });
+        }
       }
     }
   };
@@ -72,6 +71,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("RENDER");
     return (
       <div className="App">
         <div className="main">

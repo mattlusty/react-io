@@ -4,7 +4,6 @@ import Pagination from "./pagination";
 
 class ClientListTableControls extends Component {
   render() {
-    console.log("THIS CURRENT PAGE: ", this.props.currentPage);
     return (
       <div className="table-controls">
         <div className="action delete flex-center-v">Delete</div>
