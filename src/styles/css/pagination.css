@@ -21,6 +21,10 @@
   justify-content: space-evenly;
 }
 
+.pageSize label {
+  cursor: pointer;
+}
+
 .previous,
 .next {
   width: 43px;

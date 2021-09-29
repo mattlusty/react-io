@@ -15,6 +15,13 @@
   padding: 10px 10px 10px 20px;
   background-color: #e8f4f5;
   justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #d2e7e8;
+  border-bottom: 1px solid #d2e7e8;
+}
+
+.card .section:first-child .strip {
+  border-top: none;
 }
 
 .card .section .title {
@@ -28,7 +35,7 @@
 
 .card .section .content {
   padding-top: 10px;
-  color: #1a98a1;
+  color: var(--color-v-dark-grey);
   padding: 8px;
 }
 

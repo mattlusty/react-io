@@ -1,12 +1,3 @@
-:root {
-  // Blue Theme
-  --color-dark-grey: #dadada;
-  --color-rows-dark-grey: rgb(243, 243, 243);
-  --color-s-dark-grey: #eeeeee;
-  --color-v-dark-grey: #8d8d8d;
-  --color-vvv-dark-grey: #5f5f5f;
-}
-
 table {
   width: 100%;
   border-radius: 5px;
@@ -21,16 +12,11 @@ table {
 thead {
   height: 40px;
   padding: 10px;
+  color: #1a98a1;
 }
 
 th {
   padding: 10px;
-}
-
-table .checker {
-  // dont give td with checkbox any display: flex (causes layout issues - and dont think we need it)
-  // width: 0px; // has the effect of fitting to content
-  // width: fit-content; // has no effect??
 }
 
 table input {
@@ -97,6 +83,7 @@ tr:nth-child(even) {
   display: flex;
   // justify-content: space-between;
   padding: 10px 8px 8px 8px;
+  cursor: pointer;
 }
 
 .action {

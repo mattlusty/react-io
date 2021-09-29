@@ -1,4 +1,35 @@
-// CARD COMPONENT CSS
+.drop-down {
+  border-radius: 10px;
+  background-color: white;
+  width: 150px;
+  position: absolute;
+  right: 0px;
+  margin-top: 10px;
+  box-shadow: var(--shad-lighter);
+  overflow: hidden;
+  display: none;
+}
+
+.profile-wrapper.open .drop-down {
+  display: block;
+}
+
+.drop-down li {
+  padding: 10px;
+}
+
+.drop-down li:not(.header):hover {
+  background-color: #f7f7f7;
+}
+
+.drop-down li.header {
+  border-bottom: 1px solid #deedee;
+}
+
+.drop-down li.logout {
+  border-top: 1px solid #deedee;
+  background-color: var(--color-bg-light);
+}
 
 .card {
   border-radius: 10px;
@@ -11,8 +42,6 @@
 .card:last-child {
   margin-bottom: 0;
 }
-
-// CARD SECTION COMPONENT
 
 .card .section .strip {
   display: flex;
@@ -37,17 +66,14 @@
   height: 35px;
 }
 
-// SUB AREAS - OF A CARD
-
 .card .section .content {
   padding-top: 10px;
-  // line-height: 23px; // this broke table header
-  color: var(--color-v-dark-grey);
+  color: #1a98a1;
   padding: 8px;
 }
 
 .card .section .group {
-  background-color: rgb(243, 243, 243);
+  background-color: #f3f3f3;
   margin-bottom: 16px;
   border-radius: 5px;
   padding: 10px;

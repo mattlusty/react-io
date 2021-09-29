@@ -8,20 +8,9 @@ function range(from, to) {
   return result;
 }
 
-function toggleBool(boolvalue, bool) {
-  if (bool === undefined) {
-    return !boolvalue;
-  }
-  if (bool === true) {
-    return true;
-  } else if (bool === false) {
-    return false;
-  }
-}
-
 function forcePageReflow(content) {
   let x = content.offsetWidth;
   return x;
 }
 
-export { range, toggleBool, forcePageReflow };
+export { range, forcePageReflow };

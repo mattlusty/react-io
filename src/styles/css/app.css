@@ -1,0 +1,127 @@
+/*b   db  .d8b.  db    db d888888b  d888b   .d8b.  d888888b d888888b  .d88b.  d8b   db 
+888o  88 d8' `8b 88    88   `88'   88' Y8b d8' `8b `~~88~~'   `88'   .8P  Y8. 888o  88 
+88V8o 88 88ooo88 Y8    8P    88    88      88ooo88    88       88    88    88 88V8o 88 
+88 V8o88 88~~~88 `8b  d8'    88    88  ooo 88~~~88    88       88    88    88 88 V8o88 
+88  V888 88   88  `8bd8'    .88.   88. ~8~ 88   88    88      .88.   `8b  d8' 88  V888 
+VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP   V*/
+.nav-wrapper {
+  position: relative;
+  z-index: 999;
+  height: var(--height-nav);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  background-color: var(--color-bg-header);
+  box-shadow: var(--shad-lighter);
+  height: 58px;
+}
+
+.nav-wrapper .place-holder {
+  position: relative;
+  background-color: var(--color-bg-header);
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.nav > .header {
+  background-color: var(--color-bg-header);
+  padding: 10px;
+  flex-basis: 250px;
+}
+
+.logo {
+  background-color: var(--color-bg-test3);
+  height: 100%;
+  font-size: 2.5rem;
+  font-family: "sam";
+  color: var(--color-f-tier3);
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.search {
+  height: 100%;
+  width: 250px;
+  border-radius: var(--height-primary);
+  background-color: var(--color-bg-white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.nav .search {
+  padding-left: 6px;
+}
+
+.profile {
+  position: relative;
+  height: var(--height-primary);
+  width: var(--height-primary);
+  border-radius: 50%;
+  background-color: var(--color-bg-test1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+}
+
+/*8888. d888888b d888888b  .o88b. db   dD db    db      d8b   db  .d8b.  db    db 
+88'  YP `~~88~~'   `88'   d8P  Y8 88 ,8P' `8b  d8'      888o  88 d8' `8b 88    88 
+`8bo.      88       88    8P      88,8P    `8bd8'       88V8o 88 88ooo88 Y8    8P 
+  `Y8b.    88       88    8b      88`8b      88         88 V8o88 88~~~88 `8b  d8' 
+db   8D    88      .88.   Y8b  d8 88 `88.    88         88  V888 88   88  `8bd8'  
+`8888Y'    YP    Y888888P  `Y88P' YP   YD    YP         VP   V8P YP   YP    */
+.nav.fixed {
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.nav.fixed.locked {
+  transform: translateY(0);
+}
+
+.nav.transition {
+  transition: 0.3s ease;
+}
+
+.sticky-hidden {
+  transform: translateY(-100%);
+}
+
+/*b   db  .d8b.  db    db      d888888b  .d88b.   d888b   d888b  db      d88888b 
+888o  88 d8' `8b 88    88      `~~88~~' .8P  Y8. 88' Y8b 88' Y8b 88      88'     
+88V8o 88 88ooo88 Y8    8P         88    88    88 88      88      88      88ooooo 
+88 V8o88 88~~~88 `8b  d8'         88    88    88 88  ooo 88  ooo 88      88~~~~~ 
+88  V888 88   88  `8bd8'          88    `8b  d8' 88. ~8~ 88. ~8~ 88booo. 88.     
+VP   V8P YP   YP    YP            YP     `Y88P'   Y888P   Y888P  Y88888P Y8888*/
+.nav-toggle {
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-bg-dark);
+  margin: 10px;
+  color: var(--color-bg-white);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-toggle .icon {
+  transform: rotate(90deg);
+  color: var(--color-bg-white);
+}
+
+.nav-toggle.locked .icon {
+  transform: rotate(-90deg);
+}
+
+.nav-toggler {
+  color: #8a8a8a;
+}
+
+.nav-toggler.locked {
+  color: var(--header-a);
+}

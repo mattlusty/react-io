@@ -78,14 +78,6 @@ class Clients extends Component {
         <div className="section">
           <div className="strip">
             <div className="title">Client Search Results</div>
-            <Pagination
-              itemsCount={this.state.itemsCount}
-              pageSize={this.state.pageSize}
-              pagesCount={this.state.pagesCount}
-              currentPage={this.state.currentPage}
-              pages={this.state.pages}
-              onPageChange={this.handlePageChange}
-            />
           </div>
           <div className="content">
             <ClientListTable pageClients={this.state.pageClients} />

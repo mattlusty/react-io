@@ -1,4 +1,38 @@
-// CARD COMPONENT CSS
+.drop-down {
+  border-radius: 10px;
+  background-color: white;
+  width: 150px;
+  // height: 200px;
+  position: absolute;
+  right: 0px;
+  margin-top: 10px;
+  box-shadow: var(--shad-lighter);
+  overflow: hidden;
+  display: none;
+}
+
+.profile-wrapper.open .drop-down {
+  display: block;
+}
+
+.drop-down li {
+  padding: 10px;
+}
+
+.drop-down li:not(.header):hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.drop-down li.header {
+  border-bottom: 1px solid #deedee;
+}
+
+.drop-down li.logout {
+  border-top: 1px solid #deedee;
+  background-color: var(--color-bg-light);
+}
+
+////
 
 .card {
   border-radius: 10px;
@@ -42,7 +76,7 @@
 .card .section .content {
   padding-top: 10px;
   // line-height: 23px; // this broke table header
-  color: var(--color-v-dark-grey);
+  color: #1a98a1;
   padding: 8px;
 }
 

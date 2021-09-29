@@ -19,8 +19,16 @@ ul {
   padding: 0px;
 }
 
+li {
+  white-space: nowrap;
+}
+
 th {
   text-align: unset;
+}
+
+[type="checkbox"] {
+  color: red;
 }
 
 /*88b   db       .d88b.  d8888b.  .d8b.  db      .d8888. 
@@ -157,7 +165,12 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
    YP    YP   YP 88   YD Y888888P YP   YP Y8888P' Y88888P Y88888P `8888*/
 :root {
   --color-bg-header: #e8f4f5;
+  --color-bg-light: #f7fbfc;
+  --color-bg-hover: #dde9eb;
   --color-bg-dark: #9cc2cc;
+  --color-bg-darker1: #1a98a1;
+  --color-bg-darker2: #328296;
+  --color-bg-darker3: #467380;
   --color-bg-sidemenu: #ffffff;
   --color-bg-white: #ffffff;
   --color-f-primary: rgb(0, 0, 0);
@@ -177,6 +190,20 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
   --pad: 10px;
   --height-primary: 38px;
   --height-nav: calc(var(--height-primary) + 2 * var(--pad));
+}
+
+:root {
+  --color-dark-grey: #dadada;
+  --color-rows-dark-grey: rgb(243, 243, 243);
+  --color-s-dark-grey: #eeeeee;
+  --color-v-dark-grey: #8d8d8d;
+  --color-v-grey-lighter1: #b1b1b1;
+  --color-v-grey-lighter2: #c2c2c2;
+  --color-v-grey-lighter3: #c2c2c2;
+  --color-grey-dark1: #8d8d8d;
+  --color-grey-dark2: #707070;
+  --color-grey-dark3: #444444;
+  --color-vvv-dark-grey: #5f5f5f;
 }
 
 /*8888b  .d88b.  d8b   db d888888b .d8888. 

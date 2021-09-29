@@ -10,7 +10,6 @@ import { forcePageReflow } from "./scripts/utils.js";
 
 class App extends Component {
   state = {
-    boo: "hoo",
     nav: {
       locked: false,
       translate: null,
@@ -25,7 +24,7 @@ class App extends Component {
     this.setState({ nav: { ...this.state.nav, element: this.state.nav.ref.current } });
   }
 
-  onClick = () => {
+  handleNavToggle = () => {
     let wasLocked = this.state.nav.locked;
     let scroll = window.scrollY;
 
@@ -76,7 +75,7 @@ class App extends Component {
       <div className="App">
         <div className="main">
           <Nav nav={this.state.nav} onTransitionEnd={this.handleTransitionEnd} />
-          <NavToggler onClick={this.onClick} />
+          <NavToggler onClick={this.handleNavToggle} />
           <SideMenu />
           <Page />
         </div>
