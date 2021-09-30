@@ -89,6 +89,11 @@ body::before {
   justify-content: center;
 }
 
+.flex-spaced {
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -230,9 +235,11 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
   --color-rows-dark-grey: rgb(243, 243, 243);
   --color-s-dark-grey: #eeeeee;
   --color-v-dark-grey: #8d8d8d;
-  --color-v-grey-lighter1: #b1b1b1;
-  --color-v-grey-lighter2: #c2c2c2;
-  --color-v-grey-lighter3: #c2c2c2;
+  --color-grey-lighter1: #b1b1b1;
+  --color-grey-lighter2: #c2c2c2;
+  --color-grey-lighter3: #d1d1d1;
+  --color-grey-lighter4: #e0e0e0;
+  --color-grey-lighter5: #eeeeee;
   --color-grey-dark1: #8d8d8d;
   --color-grey-dark2: #707070;
   --color-grey-dark3: #444444;

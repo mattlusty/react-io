@@ -1,0 +1,32 @@
+.table-controls {
+  display: flex;
+  padding: 10px 8px 8px 8px;
+  cursor: pointer;
+}
+
+.action {
+  border: 1px solid var(--color-dark-grey);
+  padding: 5px;
+  border-radius: 3px;
+  background-color: var(--color-rows-dark-grey);
+  color: var(--color-v-dark-grey);
+}
+
+.action:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
+}
+
+.delete {
+  margin-right: 10px;
+}
+
+.relocate {
+  margin-right: 10px;
+}
+
+.space {
+  border: 1px solid var(--color-dark-grey);
+  border-radius: 3px;
+  margin-right: 10px;
+  flex-grow: 1;
+}

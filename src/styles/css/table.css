@@ -4,10 +4,7 @@ table {
   border-spacing: 0;
   padding: 8px;
   padding-bottom: 0;
-  // border-collapse: collapse;
 }
-
-// Table Header
 
 thead {
   height: 40px;
@@ -28,8 +25,6 @@ thead th {
   background-color: var(--color-rows-dark-grey);
 }
 
-// Table Header Border
-
 thead th:first-child {
   border-radius: 5px 0 0 5px;
   border: 1px solid var(--color-dark-grey);
@@ -46,8 +41,6 @@ thead th:last-child {
   border: 1px solid var(--color-dark-grey);
   border-left: 0;
 }
-
-// Table Rows Border
 
 tbody td:first-child {
   border-radius: 5px 0 0 5px;
@@ -66,8 +59,6 @@ tbody td:last-child {
   border-left: 0;
 }
 
-// Table body
-
 td {
   padding: 10px;
   color: var(--color-v-dark-grey);
@@ -75,41 +66,4 @@ td {
 
 tr:nth-child(even) {
   background-color: var(--color-rows-dark-grey);
-}
-
-// TABLE CONTROLS (ACTIONS AND PAGINATOR)
-
-.table-controls {
-  display: flex;
-  // justify-content: space-between;
-  padding: 10px 8px 8px 8px;
-  cursor: pointer;
-}
-
-.action {
-  border: 1px solid var(--color-dark-grey);
-  padding: 5px;
-  border-radius: 3px;
-  background-color: var(--color-rows-dark-grey);
-  color: var(--color-v-dark-grey);
-}
-
-.action:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
-}
-
-.delete {
-  margin-right: 10px;
-}
-
-.relocate {
-  margin-right: 10px;
-}
-
-.space {
-  border: 1px solid var(--color-dark-grey);
-  // background-color: var(--color-rows-dark-grey);
-  border-radius: 3px;
-  margin-right: 10px;
-  flex-grow: 1;
 }

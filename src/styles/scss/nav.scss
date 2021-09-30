@@ -1,16 +1,20 @@
-/*b   db  .d8b.  db    db d888888b  d888b   .d8b.  d888888b d888888b  .d88b.  d8b   db 
-888o  88 d8' `8b 88    88   `88'   88' Y8b d8' `8b `~~88~~'   `88'   .8P  Y8. 888o  88 
-88V8o 88 88ooo88 Y8    8P    88    88      88ooo88    88       88    88    88 88V8o 88 
-88 V8o88 88~~~88 `8b  d8'    88    88  ooo 88~~~88    88       88    88    88 88 V8o88 
-88  V888 88   88  `8bd8'    .88.   88. ~8~ 88   88    88      .88.   `8b  d8' 88  V888 
-VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP   V*/
+// not used??
 
-.nav-wrapper {
-  position: relative;
-  z-index: 999;
-  height: var(--height-nav);
-  user-select: none;
-}
+// .nav.wrapper {
+//   position: relative;
+//   z-index: 999;
+//   height: var(--height-nav);
+//   user-select: none;
+// }
+
+// not used??
+
+// .nav.wrapper .nav-placeHolder {
+//   position: relative;
+//   background-color: var(--color-bg-header);
+//   height: 100%;
+//   box-sizing: content-box;
+// }
 
 .nav {
   position: absolute;
@@ -19,45 +23,18 @@ VP   V8P YP   YP    YP    Y888888P  Y888P  YP   YP    YP    Y888888P  `Y88P'  VP
   width: 100vw;
   background-color: var(--color-bg-header);
   box-shadow: var(--shad-lighter);
-  height: 58px;
-  // height is determined by content (currently - singularly dependent on the profile element)
-}
-
-.nav-wrapper .place-holder {
-  position: relative;
-  background-color: var(--color-bg-header);
-  height: 100%;
+  // height: 58px;
   box-sizing: content-box;
+  // setting height (and using box-sizing: border-box) add border on inside overlapping (set height) content
+  // either dont use set height or use box-sizing: content-box instead
+  border-bottom: 1px solid var(--color-grey-dark1);
 }
 
 .nav > .header {
   background-color: var(--color-bg-header);
   padding: 10px;
   flex-basis: 250px;
-}
-
-.logo {
-  background-color: var(--color-bg-test3);
-  height: 100%;
-  //margin-left: 10px;
-  font-size: 2.5rem;
-  font-family: "sam";
-  color: var(--color-f-tier3);
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-}
-
-.search {
-  height: 100%;
-  width: 250px;
-  border-radius: var(--height-primary); // ensures fully rounded corners
-  background-color: var(--color-bg-white);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  // border: 1px solid (var(--color-grey-dark3));
-}
-
-.nav .search {
-  padding-left: 6px;
+  display: flex;
 }
 
 /*8888. d888888b d888888b  .o88b. db   dD db    db      d8b   db  .d8b.  db    db 
@@ -85,42 +62,4 @@ db   8D    88      .88.   Y8b  d8 88 `88.    88         88  V888 88   88  `8bd8'
 // maybe not needed as class
 .sticky-hidden {
   transform: translateY(-100%);
-}
-
-/*b   db  .d8b.  db    db      d888888b  .d88b.   d888b   d888b  db      d88888b 
-888o  88 d8' `8b 88    88      `~~88~~' .8P  Y8. 88' Y8b 88' Y8b 88      88'     
-88V8o 88 88ooo88 Y8    8P         88    88    88 88      88      88      88ooooo 
-88 V8o88 88~~~88 `8b  d8'         88    88    88 88  ooo 88  ooo 88      88~~~~~ 
-88  V888 88   88  `8bd8'          88    `8b  d8' 88. ~8~ 88. ~8~ 88booo. 88.     
-VP   V8P YP   YP    YP            YP     `Y88P'   Y888P   Y888P  Y88888P Y8888*/
-
-.nav-toggle {
-  position: fixed;
-  z-index: 999;
-  bottom: 0px;
-  right: 0px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--color-bg-dark);
-  margin: 10px;
-  color: var(--color-bg-white);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-toggle .icon {
-  transform: rotate(90deg);
-  color: var(--color-bg-white);
-}
-
-.nav-toggle.locked .icon {
-  transform: rotate(-90deg);
-}
-
-.nav-toggler {
-  color: rgb(138, 138, 138);
-}
-
-.nav-toggler.locked {
-  color: var(--header-a);
 }

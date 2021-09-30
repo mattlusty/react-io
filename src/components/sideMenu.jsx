@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import SideMenuHeader from './sideMenuHeader'
-import AccordionMenu from './accordionMenu'
-
+import React, { Component } from "react";
+import SideMenuHeader from "./sideMenuHeader";
+import AccordionMenu from "./accordionMenu";
+import "../styles/css/sideMenu.css";
 
 class SideMenu extends Component {
   state = {
-    hidden: true
-  }
+    hidden: true,
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
     this.sideMenuWrapperRef = React.createRef();
     this.sideMenuRef = React.createRef();
   }
@@ -20,22 +20,24 @@ class SideMenu extends Component {
   }
 
   onClick = () => {
-    this.setState({hidden: !this.state.hidden})
-  }
+    this.setState({ hidden: !this.state.hidden });
+  };
 
   render() {
-    let wrapperClasses = `side-menu-wrapper ${this.state.hidden ? "hidden" : ""}`
-    let menuClasses = `side-menu ${this.state.hidden ? "hidden" : ""}`
+    let wrapperClasses = `side-menu-wrapper ${this.state.hidden ? "hidden" : ""}`;
+    let menuClasses = `side-menu ${this.state.hidden ? "hidden" : ""}`;
 
-     return (
-        <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
-            <div className={menuClasses}> { /* class=hidden */ } 
-                <SideMenuHeader onClick={this.onClick} ref={this.sideMenuRef}/>
-                <AccordionMenu />
-            </div>
+    return (
+      <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
+        <div className={menuClasses}>
+          {" "}
+          {/* class=hidden */}
+          <SideMenuHeader onClick={this.onClick} ref={this.sideMenuRef} />
+          <AccordionMenu />
         </div>
-    )
+      </div>
+    );
   }
 }
 
-export default SideMenu
+export default SideMenu;

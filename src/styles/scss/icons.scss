@@ -1,0 +1,9 @@
+.icon {
+  height: calc(var(--height-primary) - 10px);
+  width: calc(var(--height-primary) - 10px);
+  overflow: hidden;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}

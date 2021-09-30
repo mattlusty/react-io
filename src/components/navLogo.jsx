@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+//
+import "../styles/css/navLogo.css";
 
 class NavLogo extends Component {
   render() {
     return (
-      <div className="header flex-center-v no-shrink">
+      <div className="header no-shrink">
         <div className="ham rounded border flex-center">
           <div className="icon marg4 marg-v flex-center no-shrink open shad-hov">
             <i className="mai-menu"></i>

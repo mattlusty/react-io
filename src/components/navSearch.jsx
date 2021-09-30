@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//
+import "../styles/css/navSearch.css";
 
 class NavSearch extends Component {
   render() {

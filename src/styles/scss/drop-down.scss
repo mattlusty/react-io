@@ -2,13 +2,13 @@
   border-radius: 10px;
   background-color: white;
   width: 150px;
-  // height: 200px;
   position: absolute;
   right: 0px;
-  margin-top: 10px;
+  margin-top: 6px;
   box-shadow: var(--shad-lighter);
   overflow: hidden;
   display: none;
+  border: 1px solid (var(--color-grey-dark1));
 }
 
 .profile-wrapper.open .drop-down {
@@ -23,6 +23,10 @@
   background-color: rgb(247, 247, 247);
 }
 
+.drop-down li.logout:hover {
+  border-top: 1px solid var(--color-grey-lighter5);
+}
+
 .drop-down li.header {
   border-bottom: 1px solid #deedee;
 }
@@ -30,76 +34,4 @@
 .drop-down li.logout {
   border-top: 1px solid #deedee;
   background-color: var(--color-bg-light);
-}
-
-////
-
-.card {
-  border-radius: 10px;
-  background-color: white;
-  overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: var(--shad-lighter);
-}
-
-.card:last-child {
-  margin-bottom: 0;
-}
-
-// CARD SECTION COMPONENT
-
-.card .section .strip {
-  display: flex;
-  padding: 10px 10px 10px 20px;
-  background-color: #e8f4f5;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #d2e7e8;
-  border-bottom: 1px solid #d2e7e8;
-}
-
-.card .section:first-child .strip {
-  border-top: none;
-}
-
-.card .section .title {
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
-  color: #1a98a1;
-  font-weight: bold;
-  height: 35px;
-}
-
-// SUB AREAS - OF A CARD
-
-.card .section .content {
-  padding-top: 10px;
-  // line-height: 23px; // this broke table header
-  color: #1a98a1;
-  padding: 8px;
-}
-
-.card .section .group {
-  background-color: rgb(243, 243, 243);
-  margin-bottom: 16px;
-  border-radius: 5px;
-  padding: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  display: block;
-}
-
-.card .section .group:last-child {
-  margin-bottom: 0;
-}
-
-.card .section .group2 {
-  flex-grow: 1;
-  padding: 8px;
-}
-
-.card .section form {
-  display: flex;
-  justify-content: space-between;
 }

@@ -1,0 +1,21 @@
+.columnGroup-item {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.columnGroup-item:last-child {
+  flex-grow: 1;
+  margin-right: 0px;
+}
+
+.rowGroup {
+  margin-bottom: 16px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: 1px solid var(--color-grey-lighter4);
+}
+
+.rowGroup:last-child {
+  margin-bottom: 0;
+}

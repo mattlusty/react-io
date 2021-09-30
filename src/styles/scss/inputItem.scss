@@ -6,7 +6,11 @@
 .input-item {
   display: flex;
   align-items: center;
-  margin: 10px 0px 10px 0;
+  margin-bottom: 10px;
+}
+
+.input-item:last-child {
+  margin-bottom: 0;
 }
 
 .input-item input:focus {

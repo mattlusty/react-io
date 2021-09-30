@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/css/input-item.css";
+import "../styles/css/inputItem.css";
 
 class InputItem extends Component {
   state = {};

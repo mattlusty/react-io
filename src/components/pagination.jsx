@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "../styles/css/pagination.css";
-import GrowingInput from "./growingInput";
+import MultiSelect from "./multiSelect";
 
 class Pagination extends Component {
   getPageSelection = () => {
-    let { pagesCount: n, currentPage: c } = this.props;
+    let { pages, currentPage: c } = this.props.pagination;
+    let n = pages.length;
     if (n <= 9) {
-      return this.props.pages;
+      return pages;
     } else {
       if (c <= 5) {
         return [1, 2, 3, 4, 5, 6, 7, ". . .", n];
@@ -19,15 +20,17 @@ class Pagination extends Component {
   };
 
   render() {
+    let { currentPage } = this.props.pagination;
+    let { onPageChange } = this.props;
     return (
       <div className="pagination">
         <div className="pageSize">
           <div>
-            <GrowingInput name="pageSize" />
+            <MultiSelect />
             <label htmlFor="pageSize">Results per page</label>
           </div>
         </div>
-        <div className="previous" onClick={() => this.props.onPageChange(this.props.currentPage - 1)}>
+        <div className="previous" onClick={() => onPageChange(currentPage - 1)}>
           <div>&lt;</div>
         </div>
         <div className="pages">
@@ -35,15 +38,15 @@ class Pagination extends Component {
             return (
               <div
                 key={Math.random()}
-                className={`${this.props.currentPage === page ? "active" : ""}`}
-                onClick={() => this.props.onPageChange(page)}
+                className={`${currentPage === page ? "active" : ""}`}
+                onClick={() => onPageChange(page)}
               >
                 {page}
               </div>
             );
           })}
         </div>
-        <div className="next" onClick={() => this.props.onPageChange(this.props.currentPage + 1)}>
+        <div className="next" onClick={() => onPageChange(currentPage + 1)}>
           <div>&gt;</div>
         </div>
       </div>

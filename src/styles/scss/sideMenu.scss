@@ -1,56 +1,3 @@
-/*88888b  .o88b.  .d88b.  d8b   db .d8888. 
-  `88'   d8P  Y8 .8P  Y8. 888o  88 88'  YP 
-   88    8P      88    88 88V8o 88 `8bo.   
-   88    8b      88    88 88 V8o88   `Y8b. 
-  .88.   Y8b  d8 `8b  d8' 88  V888 db   8D 
-Y888888P  `Y88P'  `Y88P'  VP   V8P `8888*/
-
-.icon {
-  // color: var(--color-bg-header);
-  height: calc(var(--height-primary) - 10px);
-  width: calc(var(--height-primary) - 10px);
-  overflow: hidden;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  // margin-left: 4px;
-}
-
-/*88b.  .d88b.  d8b   db d888888b  .d8b.  d888888b d8b   db d88888b d8888b. 
-d8P  Y8 .8P  Y8. 888o  88 `~~88~~' d8' `8b   `88'   888o  88 88'     88  `8D 
-8P      88    88 88V8o 88    88    88ooo88    88    88V8o 88 88ooooo 88oobY' 
-8b      88    88 88 V8o88    88    88~~~88    88    88 V8o88 88~~~~~ 88`8b   
-Y8b  d8 `8b  d8' 88  V888    88    88   88   .88.   88  V888 88.     88 `88. 
- `Y88P'  `Y88P'  VP   V8P    YP    YP   YP Y888888P VP   V8P Y88888P 88   */
-
-.fix-container {
-  position: fixed;
-  width: 100%;
-}
-
-/*8b  d88.  .d8b.  d888888b d8b   db 
-88'YbdP`88 d8' `8b   `88'   888o  88 
-88  88  88 88ooo88    88    88V8o 88 
-88  88  88 88~~~88    88    88 V8o88 
-88  88  88 88   88   .88.   88  V888 
-YP  YP  YP YP   YP Y888888P VP   V*/
-
-.main {
-  display: flex;
-  position: relative;
-  top: 0;
-  z-index: 999;
-  user-select: none;
-}
-
-/*8888. d888888b d8888b. d88888b      .88b  d88. d88888b d8b   db db    db 
-88'  YP   `88'   88  `8D 88'          88'YbdP`88 88'     888o  88 88    88 
-`8bo.      88    88   88 88ooooo      88  88  88 88ooooo 88V8o 88 88    88 
-  `Y8b.    88    88   88 88~~~~~      88  88  88 88~~~~~ 88 V8o88 88    88 
-db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88 
-`8888Y' Y888888P Y8888D' Y88888P      YP  YP  YP Y88888P VP   V8P  Y888*/
-
 .side-menu-wrapper {
   width: 250px; // orginal width
   flex-shrink: 0;
@@ -68,9 +15,9 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
   height: 100vh;
   background-color: var(--color-bg-sidemenu);
   transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
-  //left: 0px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   box-shadow: var(--shad-lighter);
+  border-right: 1px solid var(--color-grey-dark1);
+  box-sizing: content-box;
   font-size: 1.2rem;
 }
 
@@ -99,8 +46,7 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
   margin-left: -10px;
   margin-right: -10px;
   box-shadow: var(--shad-lighter);
-
-  // border: 1px solid blue;
+  border-bottom: 1px solid var(--color-grey-dark1);
 }
 
 // Header is used generally (needs extracting to general.css)
@@ -118,19 +64,18 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
 .header-inner {
   border-radius: 5px;
   display: flex;
-  height: var(--height-primary);
+  // height: var(--height-primary);
 }
 
 .ham {
-  // background-color: var(--color-bg-white);
   background-color: var(--color-bg-test3);
   margin-right: 10px;
   width: var(--height-primary);
-  //border-color: #acced6;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  //height: var(--height-primary);
-  //width: var(--height-primary);
+  border: 1px solid (var(--color-grey-dark1));
   cursor: pointer;
+  height: 38px;
+  // box-sizing: content-box; // seems to cause too many layout issue (pixel alignment)
 }
 
 // need hidden ham (nav) to provide additional
@@ -179,6 +124,8 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
   // border: 1px solid rgba(0, 0, 0, 0); extracted
   // maybe move to separate style
   cursor: pointer;
+  border: 1px solid (var(--color-grey-dark1));
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
 }
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -211,7 +158,7 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
 .tier-1 > .item-name {
   background-color: var(--color-bg-tier1);
   color: var(--color-f-tier1);
-  border-color: #8aa5ac;
+  // border-color: #8aa5ac;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
 }
 
@@ -222,14 +169,14 @@ db   8D   .88.   88  .8D 88.          88  88  88 88.     88  V888 88b  d88
 .tier-2 > .item-name {
   background-color: var(--color-bg-tier2);
   color: var(--color-f-tier2);
-  border-color: #acced6;
+  // border-color: #acced6;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
 }
 
 .tier-3 > .item-name {
   background-color: var(--color-bg-tier3);
   color: var(--color-f-tier3);
-  border-color: #acced6;
+  // border-color: #acced6;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267); // causes subtle glitch during accord collapse
 }
 

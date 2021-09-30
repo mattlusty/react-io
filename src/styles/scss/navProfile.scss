@@ -10,16 +10,18 @@
 }
 
 .profile {
-  padding: 10px;
+  padding: 0 10px;
   position: relative;
-  border-radius: 18px;
+  border-radius: 20px;
   // border-radius: 50%;
   background-color: var(--color-bg-test1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
   font-size: 1.5rem;
   margin-left: auto;
   margin-right: 0;
-  height: var(--height-primary);
+  // height: var(--height-primary);
+  height: 38px;
+  // box-sizing: content-box; // seems to cause too many layout issue (pixel alignment)
   // border: 1px solid rgb(228, 228, 228);
   border: 1px solid (var(--color-grey-dark1));
   // color: var(--color-bg-darker3);

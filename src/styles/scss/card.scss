@@ -6,6 +6,7 @@
   overflow: hidden;
   margin-bottom: 20px;
   box-shadow: var(--shad-lighter);
+  border: 1px solid (var(--color-grey-dark1));
 }
 
 .card:last-child {
@@ -43,29 +44,5 @@
   padding-top: 10px;
   // line-height: 23px; // this broke table header
   color: var(--color-v-dark-grey);
-  padding: 8px;
-}
-
-.card .section .group {
-  background-color: rgb(243, 243, 243);
-  margin-bottom: 16px;
-  border-radius: 5px;
-  padding: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  display: block;
-}
-
-.card .section .group:last-child {
-  margin-bottom: 0;
-}
-
-.card .section .group2 {
-  flex-grow: 1;
-  padding: 8px;
-}
-
-.card .section form {
-  display: flex;
-  justify-content: space-between;
+  padding: 16px;
 }

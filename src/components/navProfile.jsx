@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DropDown from "./drop-down";
-import "../styles/css/nav-profile.css";
+import DropDown from "./dropDown";
+import "../styles/css/navProfile.css";
 
 class NavProfile extends Component {
   state = {

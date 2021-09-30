@@ -1,0 +1,19 @@
+.pageSize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.pageSize .multiSelect {
+  display: inline;
+  align-items: center;
+  margin-right: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+.pageSize input:focus {
+  outline: none;
+}
