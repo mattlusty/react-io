@@ -15,7 +15,6 @@ import { forcePageReflow } from "./scripts/utils.js";
 
 class App extends Component {
   state = {
-    navLocked: false,
     nav: {
       locked: false,
       translate: null,
@@ -66,7 +65,7 @@ class App extends Component {
     }
   };
 
-  handleTransitionEnd = () => {
+  handleNavTransitionEnd = () => {
     this.setState({
       nav: {
         ...this.state.nav,
@@ -81,7 +80,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main">
-          <Nav nav={this.state.nav} locked={this.state.navLocked} onTransitionEnd={this.handleTransitionEnd} />
+          <Nav nav={this.state.nav} onTransitionEnd={this.handleNavTransitionEnd} />
           <NavToggler onClick={this.handleNavToggle} />
           <SideMenu />
           <Page />
