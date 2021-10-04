@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./styles/css/App.css";
 //
 import "./styles/css/general.css";
+import "./styles/css/HamLogo.css";
 import "./styles/css/card.css";
 import "./styles/css/icons.css";
 import "./styles/icons/custom_icons.css";

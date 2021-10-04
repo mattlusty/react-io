@@ -9,7 +9,7 @@ class AccordionMenu extends Component {
 
   render() {
     return (
-      <div className="accordion">
+      <div className="Accordion">
         {content.map((item) => {
           return <Item key={item.label} item={item} level={1} />;
         })}

@@ -4,15 +4,19 @@ import "../styles/css/Client.css";
 class Client extends Component {
   render() {
     return (
-      <div className="client">
-        <div className="name">{client.name}</div>
-        <div className="content">
-          <ul>
-            <li>DOB: {client.dob}</li>
-            <li>Email: {client.email}</li>
-            <li>Adviser: {client.adviser}</li>
-          </ul>
-        </div>
+      <div className="Client card">
+        <section>
+          <div className="headerStrip">
+            <h1>{client.name}</h1>
+          </div>
+          <div className="content">
+            <ul>
+              <li>DOB: {client.dob}</li>
+              <li>Email: {client.email}</li>
+              <li>Adviser: {client.adviser}</li>
+            </ul>
+          </div>
+        </section>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //
 import "../styles/css/Nav.css";
 //
-import NavLogo from "./NavLogo";
+import HamLogo from "./HamLogo";
 import NavSearch from "./NavSearch";
 import NavProfile from "./NavProfile";
 
@@ -15,10 +15,10 @@ class Nav extends Component {
     let style = translate ? { transform: "translateY(-" + translate + "px)" } : {};
 
     return (
-      <div className="nav-wrapper">
-        <div className="nav-placeHolder"></div>
+      <div className="navWrapper">
+        <div className="navPlaceHolder"></div>
         <div className={classes} style={style} ref={ref} onTransitionEnd={this.props.onTransitionEnd}>
-          <NavLogo />
+          <HamLogo />
           <div className="flex-grow"></div>
           <NavSearch />
           <NavProfile />
