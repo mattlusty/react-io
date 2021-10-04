@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../styles/css/multiSelect.css";
+//
+import "../styles/css/MultiSelect.css";
 
 class MultiSelect extends Component {
   state = {

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "../styles/css/pagination.css";
-import MultiSelect from "./multiSelect";
+//
+import MultiSelect from "./MultiSelect";
+
+import "../styles/css/Pagination.css";
 
 class Pagination extends Component {
   getPageSelection = () => {

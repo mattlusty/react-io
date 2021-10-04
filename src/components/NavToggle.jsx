@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //
-import "../styles/css/navToggle.css";
+import "../styles/css/NavToggle.css";
 
 class NavToggler extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //
-import "../styles/css/navLogo.css";
-
+import "../styles/css/NavLogo.css";
+//
 class NavLogo extends Component {
   render() {
     return (

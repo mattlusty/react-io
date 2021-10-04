@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import SideMenuHeader from "./sideMenuHeader";
-import AccordionMenu from "./accordionMenu";
-import "../styles/css/sideMenu.css";
+//
+import "../styles/css/SideMenu.css";
+//
+import SideMenuHeader from "./SideMenuHeader";
+import AccordionMenu from "./AccordionMenu";
 
 class SideMenu extends Component {
   state = {

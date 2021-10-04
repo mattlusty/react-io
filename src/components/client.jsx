@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import "../styles/css/client.css";
+import React, { Component } from "react";
+import "../styles/css/Client.css";
 
 class Client extends Component {
-
   render() {
     return (
       <div className="client">
@@ -15,18 +14,17 @@ class Client extends Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Client
+export default Client;
 
 // Fetch Data from API
 
-let client =
-{
+let client = {
   name: "Tony Iony",
   dob: "19/01/2000",
   email: "tony@gmail.com",
-  adviser: "Richard Smith"
-}
+  adviser: "Richard Smith",
+};

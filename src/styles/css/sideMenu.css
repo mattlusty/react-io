@@ -16,7 +16,7 @@
   background-color: var(--color-bg-sidemenu);
   transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
   box-shadow: var(--shad-lighter);
-  border-right: 1px solid var(--color-grey-dark1);
+  border-right: 1px solid var(--color-menu-border);
   box-sizing: content-box;
   font-size: 1.2rem;
 }
@@ -43,7 +43,7 @@
   margin-left: -10px;
   margin-right: -10px;
   box-shadow: var(--shad-lighter);
-  border-bottom: 1px solid var(--color-grey-dark1);
+  border-bottom: 1px solid var(--color-menu-border);
 }
 
 .header {
@@ -67,7 +67,7 @@
   margin-right: 10px;
   width: var(--height-primary);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  border: 1px solid var(--color-grey-dark1);
+  border: 1px solid var(--color-item-border);
   cursor: pointer;
   height: 38px;
 }
@@ -76,78 +76,4 @@
   transform: translateY(2px);
   width: 172px;
   flex-shrink: 0;
-}
-
-.accordion::-webkit-scrollbar {
-  display: none;
-}
-
-.accordion {
-  position: relative;
-  flex-grow: 1;
-  padding: 2px 10px 10px 10px;
-  overflow: scroll;
-  width: 100%;
-}
-
-[class*="tier-"] {
-  margin: 10px 0;
-}
-
-[class*="tier-"]:last-child {
-  margin-bottom: 0;
-}
-
-.item-name {
-  height: var(--height-primary);
-  overflow: hidden;
-  cursor: pointer;
-  border: 1px solid var(--color-grey-dark1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-}
-
-.item > .content {
-  overflow: hidden;
-  display: none;
-}
-
-.open > .content {
-  display: block;
-}
-
-.item > .transitioning {
-  transition: height 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
-  display: block;
-}
-
-.tier-1 > .item-name {
-  background-color: var(--color-bg-tier1);
-  color: var(--color-f-tier1);
-}
-
-.tier-1 > .item-name > .icon:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-}
-
-.tier-2 > .item-name {
-  background-color: var(--color-bg-tier2);
-  color: var(--color-f-tier2);
-}
-
-.tier-3 > .item-name {
-  background-color: var(--color-bg-tier3);
-  color: var(--color-f-tier3);
-}
-
-.rot90 {
-  transition: transform 0.07s linear;
-}
-
-.open > * > .rot90 {
-  transform: rotate(90deg);
-  transition: transform 0.07s linear;
-}
-
-.mai-chevron {
-  transform: translateX(15%);
 }

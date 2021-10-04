@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import NavLogo from "./navLogo";
-import NavSearch from "./navSearch";
-import NavProfile from "./navProfile";
-import "../styles/css/nav.css";
+//
+import "../styles/css/Nav.css";
+//
+import NavLogo from "./NavLogo";
+import NavSearch from "./NavSearch";
+import NavProfile from "./NavProfile";
 
 // import { toggleBool, forcePageReflow } from "../scripts/utils.js";
 

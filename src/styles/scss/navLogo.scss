@@ -1,3 +1,6 @@
+.logo-wrapper {
+}
+
 .logo {
   background-color: var(--color-bg-test3);
   // height: 38px;
@@ -8,5 +11,5 @@
   color: var(--color-f-tier3);
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  border: 1px solid (var(--color-grey-dark1));
+  border: 1px solid (var(--color-item-border));
 }

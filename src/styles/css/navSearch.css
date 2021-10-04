@@ -1,12 +1,16 @@
+.search-wrapper {
+  margin: 10px 0 10px 10px;
+}
+
 .search {
   height: 38px;
   width: 250px;
   border-radius: var(--height-primary);
   background-color: var(--color-bg-white);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  border: 1px solid var(--color-grey-dark1);
+  border: 1px solid var(--color-item-border);
 }
 
 .nav .search {
-  padding-left: 6px;
+  padding-left: 10px;
 }

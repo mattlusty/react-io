@@ -1,7 +1,7 @@
-.table-controls {
+.TableControls {
   display: flex;
-  padding: 10px 8px 8px 8px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .action {

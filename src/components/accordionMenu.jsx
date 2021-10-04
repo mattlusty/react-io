@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import Item from "./item";
+//
+import "../styles/css/Accordion.css";
+//
+import Item from "./Item";
 
 class AccordionMenu extends Component {
   state = {};

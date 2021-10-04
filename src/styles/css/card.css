@@ -4,28 +4,28 @@
   overflow: hidden;
   margin-bottom: 20px;
   box-shadow: var(--shad-lighter);
-  border: 1px solid var(--color-grey-dark1);
+  border: 1px solid var(--color-menu-border);
 }
 
 .card:last-child {
   margin-bottom: 0;
 }
 
-.card .section .strip {
+.headerStrip {
   display: flex;
-  padding: 10px 10px 10px 20px;
-  background-color: #e8f4f5;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 10px 10px 20px;
+  background-color: #e8f4f5;
   border-top: 1px solid #d2e7e8;
   border-bottom: 1px solid #d2e7e8;
 }
 
-.card .section:first-child .strip {
+section:first-child .headerStrip {
   border-top: none;
 }
 
-.card .section .title {
+.headerStrip h1 {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
@@ -34,7 +34,7 @@
   height: 35px;
 }
 
-.card .section .content {
+section .content {
   padding-top: 10px;
   color: var(--color-v-dark-grey);
   padding: 16px;

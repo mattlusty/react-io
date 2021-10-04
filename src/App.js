@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 //
+import "./styles/css/App.css";
+//
 import "./styles/css/general.css";
-import "./styles/css/app.css";
 import "./styles/css/card.css";
 import "./styles/css/icons.css";
 import "./styles/icons/custom_icons.css";
 //
-import Nav from "./components/nav";
-import NavToggler from "./components/navToggler";
-import SideMenu from "./components/sideMenu";
-import Page from "./components/page";
+import Nav from "./components/Nav";
+import NavToggler from "./components/NavToggle";
+import SideMenu from "./components/SideMenu";
+import Page from "./components/Page";
 
 import { forcePageReflow } from "./scripts/utils.js";
 
@@ -79,12 +80,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="main">
-          <Nav nav={this.state.nav} onTransitionEnd={this.handleNavTransitionEnd} />
-          <NavToggler onClick={this.handleNavToggle} />
-          <SideMenu />
-          <Page />
-        </div>
+        <Nav nav={this.state.nav} onTransitionEnd={this.handleNavTransitionEnd} />
+        <NavToggler onClick={this.handleNavToggle} />
+        <SideMenu />
+        <Page />
       </div>
     );
   }

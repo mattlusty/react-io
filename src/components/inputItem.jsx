@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../styles/css/inputItem.css";
+//
+import "../styles/css/InputItem.css";
 
 class InputItem extends Component {
   state = {};

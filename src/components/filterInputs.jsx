@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 //
-import "../styles/css/filterInputs.css";
+import "../styles/css/FilterInputs.css";
 //
-import InputItem from "./inputItem";
+import InputItem from "./InputItem";
 
 class FilterInputs extends Component {
   render() {

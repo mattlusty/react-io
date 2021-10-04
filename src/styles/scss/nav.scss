@@ -27,7 +27,7 @@
   box-sizing: content-box;
   // setting height (and using box-sizing: border-box) add border on inside overlapping (set height) content
   // either dont use set height or use box-sizing: content-box instead
-  border-bottom: 1px solid var(--color-grey-dark1);
+  border-bottom: 1px solid var(--color-menu-border);
 }
 
 .nav > .header {

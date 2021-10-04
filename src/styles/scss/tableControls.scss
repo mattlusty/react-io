@@ -1,10 +1,9 @@
 // TABLE CONTROLS (ACTIONS AND PAGINATOR)
 
-.table-controls {
+.TableControls {
   display: flex;
-  // justify-content: space-between;
-  padding: 10px 8px 8px 8px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .action {

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
+//
+import "../styles/css/Page.css";
+//
 // import Dashboard from "./dashboard";
-import "../styles/css/page.css";
-import Clients from "./clients";
+import Clients from "./Clients";
 
 class Page extends Component {
   render() {
     return (
       <div className="page">
-        <div className="container">
-          <Clients />
-        </div>
+        <Clients />
       </div>
     );
   }

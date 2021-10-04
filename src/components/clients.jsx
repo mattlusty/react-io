@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { range } from "../scripts/utils.js";
+//
 import clients from "../data/clients.js";
 import { tableFields, inputFields } from "../data/clientsTableFields.js";
 //
-import FilterInputs from "./filterInputs";
-import Table from "./table";
-import TableControls from "./tableControls";
+import FilterInputs from "./FilterInputs";
+import Table from "./Table";
+import TableControls from "./TableControls";
 
 class Clients extends Component {
   state = {
@@ -50,23 +51,23 @@ class Clients extends Component {
     let { pagination } = this.state;
     return (
       <div className="card">
-        <div className="section">
-          <div className="strip">
-            <div className="title">Client Search Filters</div>
+        <section>
+          <div className="headerStrip">
+            <h1>Client Search Filters</h1>
           </div>
           <div className="content">
             <FilterInputs fields={inputFields} />
           </div>
-        </div>
-        <div className="section">
-          <div className="strip">
-            <div className="title">Client Search Results</div>
+        </section>
+        <section>
+          <div className="headerStrip">
+            <h1>Client Search Results</h1>
           </div>
           <div className="content">
-            <Table pageClients={pagination.pageClients} fields={tableFields} />
+            <Table data={pagination.pageClients} fields={tableFields} />
             <TableControls pagination={pagination} onPageChange={this.handlePageChange} />
           </div>
-        </div>
+        </section>
       </div>
     );
   }
