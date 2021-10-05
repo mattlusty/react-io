@@ -1,0 +1,29 @@
+.ItemName {
+  display: flex;
+  align-items: center;
+  height: var(--height-primary);
+  overflow: hidden;
+  border: 1px solid var(--color-item-border);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+  cursor: pointer;
+}
+
+.level-1 > .ItemName {
+  background-color: var(--color-bg-tier1);
+  color: var(--color-f-tier1);
+}
+
+.level-2 > .ItemName {
+  background-color: var(--color-bg-tier2);
+  color: var(--color-f-tier2);
+}
+
+.level-3 > .ItemName {
+  background-color: var(--color-bg-tier3);
+  color: var(--color-f-tier3);
+}
+
+.itemLabel {
+  flex-shrink: 0;
+}

@@ -8,7 +8,8 @@ table {
 thead {
   height: 40px;
   padding: 10px;
-  color: #1a98a1;
+  font-weight: bold;
+  color: var(--color-v-dark-grey);
 }
 
 th {

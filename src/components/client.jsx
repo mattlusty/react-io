@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// Styles
 import "../styles/css/Client.css";
 
 class Client extends Component {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 //
 import "../styles/css/Page.css";
 import clients from "../data/clients.js";
@@ -11,8 +12,10 @@ class Page extends Component {
   render() {
     return (
       <div className="page">
+        <Route path="/clients" component={Clients} />
+        <Route path="/client" component={Client} />
         {/* <Clients /> */}
-        <Client data={clients[0]} />
+        {/* <Client data={clients[0]} /> */}
       </div>
     );
   }

@@ -159,8 +159,9 @@ body::before {
   margin-bottom: 4px;
 }
 
+// new mindset = just place within a specific selector (definitely dont add these classes inline)
 .border {
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.349);
 }
 
 .border-right {
@@ -168,6 +169,7 @@ body::before {
   border-right: 1px solid white;
 }
 
+// new mindset = just place within a specific selector (definitely dont add these classes inline)
 .rounded {
   border-radius: 10px;
 }

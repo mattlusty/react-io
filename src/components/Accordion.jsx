@@ -79,15 +79,17 @@ let content = [
     icon: "user",
     content: [
       {
-        label: "Clients Search",
+        label: "Clients",
         content: [],
+        url: "/clients",
       },
       {
-        label: "Leads Search",
+        label: "Leads",
         content: [],
+        url: "/client",
       },
       {
-        label: "Plans Search",
+        label: "Plans",
         content: [],
       },
       {

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { range } from "../scripts/utils.js";
-//
+// Data
 import clients from "../data/clients.js";
 import { tableFields, inputFields } from "../data/clientsTableFields.js";
-//
+// Components
 import FilterInputs from "./FilterInputs";
 import Table from "./Table";
 import TableControls from "./TableControls";

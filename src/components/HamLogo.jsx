@@ -4,8 +4,8 @@ class HamLogo extends Component {
   render() {
     return (
       <div className="HamLogo">
-        <div className="ham rounded border flex-center" onClick={this.props.onClick}>
-          <div className="icon marg4 marg-v flex-center no-shrink open shad-hov">
+        <div className="ham rounded flex-center" onClick={this.props.onClick}>
+          <div className="buttonIcon open">
             <i className="mai-menu"></i>
           </div>
         </div>

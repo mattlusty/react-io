@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 //
 import { forcePageReflow } from "../scripts/utils.js";
 //
@@ -17,7 +17,6 @@ class Item extends Component {
 
   toggle = () => {
     if (this.props.item.content.length === 0) {
-      this.props.history.push(this.props.item.url);
       return;
     }
     this.setState({ open: !this.state.open });
@@ -69,29 +68,51 @@ class Item extends Component {
     let that = this;
     this.content = this.myRef.current;
     this.content.addEventListener("transitionend", function () {
-      that.setState({ transitioning: null, height: null, initialHeight: null, finalHeight: null });
+      that.setState({ transitioning: null });
+      that.setState({ height: null });
+      that.setState({ initialHeight: null, finalHeight: null });
     });
   }
 
   render() {
-    let { open, height, transitioning } = this.state;
-    let { level } = this.props;
-    let { icon, label, content } = this.props.item;
-    let expandable = content.length > 0;
-    let classes = `Item level-${level} ${open ? "open" : ""} ${transitioning ? "transitioning" : ""}`;
+    let hasContent = this.props.item.content.length > 0;
+    let itemNameClasses = `item tier-${this.props.level} ${this.state.open ? "open" : ""}`;
+    let itemContentClasses = `content rounded ${this.state.transitioning ? "transitioning" : ""} ${
+      this.state.open ? "open" : ""
+    }`;
     return (
-      <div className={classes}>
-        <ItemName icon={icon} label={label} expandable={expandable} onClick={this.toggle} />
-        <div className="content" style={{ height }} ref={this.myRef}>
-          {expandable
-            ? content.map((item) => {
-                return <Item key={item.label} item={item} level={level + 1} history={this.props.history}></Item>;
-              })
-            : null}
+      <div className={itemNameClasses}>
+        <div className="item-name border flex-center-v rounded" onClick={this.toggle}>
+          <div className="icon flex-center no-shrink shad-hov marg4">
+            <i className={`mai-${this.props.item.icon}`}></i>
+          </div>
+          <span className="item-label no-shrink">{this.props.item.label}</span>
+          <div className="flex-grow"></div>
+          {hasContent ? (
+            <div className="icon flex-center no-shrink shad-hov marg4 rot90">
+              <i className="mai-chevron"></i>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
+        <div className={itemContentClasses} style={{ height: this.state.height }} ref={this.myRef}>
+          {(() => {
+            if (this.props.item.content) {
+              return this.props.item.content.map((item) => {
+                return <Item key={item.label} item={item} level={this.props.level + 1}></Item>;
+              });
+            }
+          })()}
+        </div>
+        {/* <div className={itemContentClasses} style={{ height: this.state.height }} ref={this.myRef}>
+          {this.props.item.content.map((item) => {
+            return <Item key={item.label} item={item} level={this.props.level + 1}></Item>;
+          })}
+        </div> */}
       </div>
     );
   }
 }
 
-export default withRouter(Item);
+export default Item;

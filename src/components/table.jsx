@@ -24,7 +24,7 @@ class Table extends Component {
                   <input type="checkbox" />
                 </td>
                 {this.props.fields.map((field) => {
-                  return <th key={Math.random()}>{client[field.name]}</th>;
+                  return <td key={Math.random()}>{client[field.name]}</td>;
                 })}
               </tr>
             );
