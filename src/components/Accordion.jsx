@@ -1,15 +1,58 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 //
 import "../styles/css/Accordion.css";
 //
 import Item from "./Item";
 
 class AccordionMenu extends Component {
-  state = {};
+  myRef = React.createRef();
+
+  handleScroll = (e) => {
+    var e = e;
+    console.log("EVENT", e);
+    // console.log(this.myRef);
+
+    var scrollTop = this.myRef.current.scrollTop;
+    var scrollHeight = this.myRef.current.scrollHeight;
+    var height = this.myRef.current.offsetHeight;
+    var delta = e.wheelDelta;
+    var up = delta > 0;
+
+    // console.log({
+    //   scrollTop,
+    //   scrollHeight,
+    //   height,
+    //   delta,
+    //   up,
+    // });
+
+    if (!up && -delta > scrollHeight - height - scrollTop) {
+      console.log("here");
+      // Scrolling down, but this will take us past the bottom.
+      this.myRef.current.scrollTop = scrollHeight;
+      return this.prevent(e);
+    } else if (up && delta > scrollTop) {
+      console.log("there");
+      // Scrolling up, but this will take us past the top.
+      this.myRef.current.scrollTop = 0;
+      return this.prevent(e);
+    }
+  };
+
+  prevent = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    e.returnValue = false;
+    return false;
+  };
+
+  componentDidMount() {
+    this.myRef.current.addEventListener("wheel", this.handleScroll);
+  }
 
   render() {
     return (
-      <div className="Accordion">
+      <div className="Accordion" ref={this.myRef}>
         {content.map((item) => {
           return <Item key={item.label} item={item} level={1} />;
         })}

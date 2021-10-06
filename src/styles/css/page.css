@@ -3,6 +3,7 @@
   margin-top: 58px;
   margin-bottom: 50px;
   overflow: scroll;
+  display: flex;
 }
 
 .container {

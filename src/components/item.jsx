@@ -11,10 +11,12 @@ class Item extends Component {
     selected: false,
   };
 
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
+  myRef = React.createRef();
+
+  // constructor(props) {
+  //   super(props);
+  //   this.myRef = React.createRef();
+  // }
 
   toggle = () => {
     if (this.props.item.content.length === 0) {
