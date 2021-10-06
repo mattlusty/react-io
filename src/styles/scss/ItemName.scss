@@ -17,15 +17,21 @@
 }
 
 .level-2 > .ItemName {
-  background-color: var(--color-bg-tier2);
+  // background-color: var(--color-bg-tier2);
+  background-color: var(--color-bg-tier3);
   color: var(--color-f-tier2);
 }
 
 .level-3 > .ItemName {
-  background-color: var(--color-bg-tier3);
+  // background-color: var(--color-bg-tier3);
+  background-color: white;
   color: var(--color-f-tier3);
 }
 
 .itemLabel {
   flex-shrink: 0;
+}
+
+.ItemName .buttonIcon {
+  font-size: 1.5rem;
 }

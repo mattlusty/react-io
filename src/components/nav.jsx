@@ -22,6 +22,7 @@ class Nav extends Component {
           <div className="flex-grow"></div>
           <NavSearch />
           <NavProfile />
+          {/* <div className="extends" /> */}
         </div>
       </div>
     );

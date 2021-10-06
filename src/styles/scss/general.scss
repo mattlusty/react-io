@@ -78,12 +78,17 @@ body::before {
 88b  d88    88      .88.   88booo.   .88.      88       88    
 ~Y8888P'    YP    Y888888P Y88888P Y888888P    YP       */
 
+// NEW MINDSET - Classes given to HTML elements should be semantical and styles handled for the classes semantic purpose
+// most the below are thus deprecated
+
+// deprecated
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// deprecated
 .flex-center-v {
   display: flex;
   align-items: center;
@@ -99,10 +104,12 @@ body::before {
   justify-content: space-between;
 }
 
-.flex-grow {
+// not deprecated
+.spaceFiller {
   flex-grow: 1;
 }
 
+// deprecated
 .no-shrink {
   flex-shrink: 0;
 }
@@ -111,7 +118,7 @@ body::before {
   flex-grow: 1;
 }
 
-// so item can collapse properly
+// deprecated
 .flex-collapse {
   min-width: 0;
   overflow: hidden;

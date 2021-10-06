@@ -1,12 +1,14 @@
 .input-item label {
   display: inline-block;
-  width: 150px;
+  white-space: nowrap;
+  margin-right: 10px;
 }
 
 .input-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  justify-content: space-between;
 }
 
 .input-item:last-child {
@@ -20,10 +22,7 @@
 .input-item input {
   border: 1px solid #dfdfdf;
   border-radius: 5px;
-  height: 2.2rem;
   padding: 5px;
-  flex-grow: 1;
   display: inline-block;
-  width: 50px;
   color: #646464;
 }

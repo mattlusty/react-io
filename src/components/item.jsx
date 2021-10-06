@@ -8,6 +8,7 @@ import ItemName from "./ItemName";
 class Item extends Component {
   state = {
     open: false,
+    selected: false,
   };
 
   constructor(props) {
@@ -17,6 +18,7 @@ class Item extends Component {
 
   toggle = () => {
     if (this.props.item.content.length === 0) {
+      this.setState({ selected: true });
       this.props.history.push(this.props.item.url);
       return;
     }
@@ -74,14 +76,16 @@ class Item extends Component {
   }
 
   render() {
-    let { open, height, transitioning } = this.state;
+    let { open, height, transitioning, selected } = this.state;
     let { level } = this.props;
-    let { icon, label, content } = this.props.item;
+    let { icon, label, content, size } = this.props.item;
     let expandable = content.length > 0;
-    let classes = `Item level-${level} ${open ? "open" : ""} ${transitioning ? "transitioning" : ""}`;
+    let classes = `Item level-${level} ${open ? "open" : ""} ${transitioning ? "transitioning" : ""} ${
+      selected ? "selected" : ""
+    } `;
     return (
       <div className={classes}>
-        <ItemName icon={icon} label={label} expandable={expandable} onClick={this.toggle} />
+        <ItemName icon={icon} label={label} size={size} expandable={expandable} onClick={this.toggle} />
         <div className="content" style={{ height }} ref={this.myRef}>
           {expandable
             ? content.map((item) => {

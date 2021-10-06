@@ -1,10 +1,10 @@
 .columnGroup-item {
   flex-grow: 1;
   margin-right: 16px;
+  width: fit-content;
 }
 
 .columnGroup-item:last-child {
-  flex-grow: 1;
   margin-right: 0px;
 }
 

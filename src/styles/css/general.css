@@ -93,7 +93,7 @@ body::before {
   justify-content: space-between;
 }
 
-.flex-grow {
+.spaceFiller {
   flex-grow: 1;
 }
 

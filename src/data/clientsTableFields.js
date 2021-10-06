@@ -78,6 +78,11 @@ let inputFields = [
           name: "serviceStatus",
           label: "Service Status",
         },
+      ],
+    },
+    {
+      groupName: "servicing2",
+      fields: [
         {
           name: "organisationalUnit",
           label: "Organisational Unit",

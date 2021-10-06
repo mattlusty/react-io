@@ -6,31 +6,29 @@
   border-radius: 3px;
 }
 
-.pageSize .growingInput {
-  display: inline-grid;
+.growingInput {
+  display: grid;
   align-items: center;
-  margin-right: 5px;
 }
 
-.pageSize .growingInput::after,
-.pageSize .growingInput input {
+.growingInput::after,
+.growingInput input {
   grid-area: 1 / 1;
   padding: 5px;
   border: 1px solid var(--color-dark-grey);
 }
 
-.pageSize .growingInput input {
+.growingInput input {
   color: var(--color-v-dark-grey);
   border-radius: 5px;
-  text-align: center;
 }
 
-.pageSize .growingInput::after {
+.growingInput::after {
   content: attr(data-value);
   visibility: hidden;
   white-space: pre-wrap;
 }
 
-.pageSize input:focus {
+input:focus {
   outline: none;
 }

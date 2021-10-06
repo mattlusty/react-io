@@ -22,7 +22,7 @@ class SideMenu extends Component {
       <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
         <div className={menuClasses}>
           <div className="menuHeader">
-            <HamLogo onClick={this.onClick} />
+            <HamLogo onClick={this.onClick} open={!this.state.hidden} />
           </div>
           <Accordion />
         </div>

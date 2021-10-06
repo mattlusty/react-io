@@ -1,10 +1,22 @@
+// .extends {
+//   position: absolute;
+//   z-index: -1;
+//   // right: -100px;
+//   background-color: #e7f3f4;
+//   height: var(--height-nav);
+//   width: 2000px;
+//   box-shadow: var(--shad-lighter);
+//   border-bottom: 1px solid var(--color-menu-border);
+//   box-sizing: content-box;
+// }
+
 .nav {
   position: absolute;
   top: 0;
   display: flex;
   width: 100vw;
   background-color: var(--color-bg-header);
-  box-shadow: var(--shad-lighter);
+  // box-shadow: var(--shad-lighter);
   // height: 58px;
   box-sizing: content-box;
   // setting height (and using box-sizing: border-box) add border on inside overlapping (set height) content

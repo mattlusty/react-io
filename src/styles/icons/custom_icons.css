@@ -1,10 +1,9 @@
 @font-face {
-  font-family: "mai-icons";
-  src: url("../fonts/mai-icons.eot?7k0ses");
-  src: url("../fonts/mai-icons.eot?7k0ses#iefix") format("embedded-opentype"),
-    url("../fonts/mai-icons.ttf?7k0ses") format("truetype"),
-    url("../fonts/mai-icons.woff?7k0ses") format("woff"),
-    url("../fonts/mai-icons.svg?7k0ses#mai-icons") format("svg");
+  font-family: "custom_icons";
+  src: url("../fonts/custom_icons.eot?c9pedh");
+  src: url("../fonts/custom_icons.eot?c9pedh#iefix") format("embedded-opentype"),
+    url("../fonts/custom_icons.ttf?c9pedh") format("truetype"), url("../fonts/custom_icons.woff?c9pedh") format("woff"),
+    url("../fonts/custom_icons.svg?c9pedh#custom_icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +12,7 @@
 [class^="mai-"],
 [class*=" mai-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "mai-icons" !important;
+  font-family: "custom_icons" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,27 +25,189 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.mai-times:before {
+.mai-calendar:before {
   content: "\e900";
 }
-.mai-search:before {
+.mai-A-circle:before {
   content: "\e901";
 }
-.mai-menu:before {
+.mai-A:before {
   content: "\e902";
 }
-.mai-pound:before {
+.mai-arrowLoop:before {
   content: "\e903";
 }
-.mai-lock:before {
+.mai-book:before {
   content: "\e904";
 }
-.mai-chevron:before {
+.mai-checklist:before {
   content: "\e905";
 }
-.mai-user:before {
+.mai-checklist2:before {
   content: "\e906";
 }
-.mai-home:before {
+.mai-chevron:before {
   content: "\e907";
+}
+.mai-clock:before {
+  content: "\e908";
+}
+.mai-clockArrow:before {
+  content: "\e909";
+}
+.mai-clockArrow2:before {
+  content: "\e90a";
+}
+.mai-cog:before {
+  content: "\e90b";
+}
+.mai-cog2:before {
+  content: "\e90c";
+}
+.mai-complaintBubble:before {
+  content: "\e90d";
+}
+.mai-complaintBubble2:before {
+  content: "\e90e";
+}
+.mai-D:before {
+  content: "\e90f";
+}
+.mai-dash:before {
+  content: "\e910";
+}
+.mai-documents:before {
+  content: "\e911";
+}
+.mai-dot:before {
+  content: "\e912";
+}
+.mai-dot2:before {
+  content: "\e913";
+}
+.mai-dottedSquare:before {
+  content: "\e914";
+}
+.mai-fileCheck:before {
+  content: "\e915";
+}
+.mai-fileCheck2:before {
+  content: "\e916";
+}
+.mai-gear:before {
+  content: "\e917";
+}
+.mai-handshake:before {
+  content: "\e918";
+}
+.mai-handshake2:before {
+  content: "\e919";
+}
+.mai-handshake3:before {
+  content: "\e91a";
+}
+.mai-home:before {
+  content: "\e91b";
+}
+.mai-leaf:before {
+  content: "\e91c";
+}
+.mai-megaphone:before {
+  content: "\e91d";
+}
+.mai-megaphone2:before {
+  content: "\e91e";
+}
+.mai-megaphone3:before {
+  content: "\e91f";
+}
+.mai-menu:before {
+  content: "\e920";
+}
+.mai-moneySearch:before {
+  content: "\e921";
+}
+.mai-moneySearch2:before {
+  content: "\e922";
+}
+.mai-O:before {
+  content: "\e923";
+}
+.mai-organisation:before {
+  content: "\e924";
+}
+.mai-P:before {
+  content: "\e925";
+}
+.mai-pencil:before {
+  content: "\e926";
+}
+.mai-plan:before {
+  content: "\e927";
+}
+.mai-pound:before {
+  content: "\e928";
+}
+.mai-puzzle1:before {
+  content: "\e929";
+}
+.mai-puzzle2:before {
+  content: "\e92a";
+}
+.mai-puzzle3:before {
+  content: "\e92b";
+}
+.mai-receipt:before {
+  content: "\e92c";
+}
+.mai-report:before {
+  content: "\e92d";
+}
+.mai-report2:before {
+  content: "\e92e";
+}
+.mai-robot:before {
+  content: "\e92f";
+}
+.mai-S:before {
+  content: "\e930";
+}
+.mai-sadFace:before {
+  content: "\e931";
+}
+.mai-sadFace2:before {
+  content: "\e932";
+}
+.mai-sales:before {
+  content: "\e933";
+}
+.mai-sales2:before {
+  content: "\e934";
+}
+.mai-search:before {
+  content: "\e935";
+}
+.mai-security:before {
+  content: "\e936";
+}
+.mai-shield:before {
+  content: "\e937";
+}
+.mai-store:before {
+  content: "\e938";
+}
+.mai-times:before {
+  content: "\e939";
+}
+.mai-upload:before {
+  content: "\e93a";
+}
+.mai-user:before {
+  content: "\e93b";
+}
+.mai-user2:before {
+  content: "\e93c";
+}
+.mai-users:before {
+  content: "\e93d";
 }

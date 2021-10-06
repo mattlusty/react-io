@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 //
 import "../styles/css/InputItem.css";
+//
+import GrowingInput from "./GrowingInput";
 
 class InputItem extends Component {
   state = {};
@@ -13,7 +15,8 @@ class InputItem extends Component {
     return (
       <div className="input-item">
         <label htmlFor={this.props.name}>{this.props.label}</label>
-        <input id={this.props.name} value={this.state.value} type="text" onChange={this.handleChange} />
+        <GrowingInput />
+        {/* <input id={this.props.name} value={this.state.value} type="text" onChange={this.handleChange} /> */}
       </div>
     );
   }
