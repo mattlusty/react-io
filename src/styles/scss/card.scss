@@ -7,10 +7,15 @@
   margin-bottom: 20px;
   box-shadow: var(--shad-lighter);
   border: 1px solid (var(--color-menu-border));
+  //
+  margin: 20px;
+  min-width: fit-content;
+  flex-grow: 1;
+  display: inline-block;
 }
 
 .card:last-child {
-  margin-bottom: 0;
+  // margin-bottom: 0;
 }
 
 // CARD SECTION COMPONENT
