@@ -4,6 +4,7 @@
   display: flex;
   width: 100vw;
   background-color: var(--color-bg-header);
+  box-shadow: var(--shad-lighter);
   box-sizing: content-box;
   border-bottom: 1px solid var(--color-menu-border);
 }

@@ -16,7 +16,7 @@
   display: flex;
   width: 100vw;
   background-color: var(--color-bg-header);
-  // box-shadow: var(--shad-lighter);
+  box-shadow: var(--shad-lighter);
   // height: 58px;
   box-sizing: content-box;
   // setting height (and using box-sizing: border-box) add border on inside overlapping (set height) content

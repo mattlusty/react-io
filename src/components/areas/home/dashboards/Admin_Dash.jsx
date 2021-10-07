@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 // Styles
-import "../styles/css/Client.css";
+import "../../../../styles/css/Client.css";
 
-class AdviserDash extends Component {
+class Admin_Dash extends Component {
   render() {
     return (
-      <div className="X Client card">
+      <div className="Client card">
         <section>
           <div className="headerStrip">
-            <h1>Adviser Dashboard</h1>
+            <h1>Admin Dashboard</h1>
           </div>
           <div className="content">
             <ul>
@@ -23,4 +23,4 @@ class AdviserDash extends Component {
   }
 }
 
-export default AdviserDash;
+export default Admin_Dash;
