@@ -1,18 +1,21 @@
-.outerWrapper {
+.Test {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.wrapper {
-  width: fit-content;
+.column {
+  border: 1px solid blue;
   flex-grow: 1;
 }
 
 .outer {
   border: 3px solid black;
-  background-color: #c2c2c2;
+  background-color: whitesmoke;
   border-radius: 10px;
   margin: 10px;
-  margin-bottom: 20px;
+  width: fit-content;
+  flex-grow: 1;
 }
 
 .outer:last-child {
@@ -20,24 +23,20 @@
 }
 
 .innerWrapper {
+  border: 2px solid #d2e4d2;
   background-color: white;
-  display: flex;
-  border: 2px solid green;
   border-radius: 10px;
-  justify-content: space-between;
-  align-items: center;
   margin: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .inner {
-  margin: 10px;
+  margin: 10px 0 10px 10px;
   white-space: nowrap;
 }
 
-.foo {
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 10px 10px 10px 0;
-  padding: 10px;
-  width: 150px;
+.Test .GrowingInput {
+  margin: 10px 10px 10px 10px;
 }

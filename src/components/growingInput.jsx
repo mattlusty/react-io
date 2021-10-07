@@ -17,7 +17,7 @@ class GrowingInput extends Component {
 
   render() {
     return (
-      <div className="growingInput" data-value={this.state.inputValue}>
+      <div className="GrowingInput" data-value={this.state.inputValue}>
         <input id={this.props.name} type="text" size="18" onInput={this.onInput} />
       </div>
     );

@@ -1,11 +1,10 @@
 .Test {
-  // border: 5px solid red;
+  border: 5px solid red;
   //
   display: flex;
-  flex-wrap: wrap;
   //
   width: 100%;
-  // min-width: fit-content;
+  min-width: fit-content;
 }
 
 .column {
@@ -24,7 +23,6 @@
   //
   // width: 600px;
   width: fit-content;
-  flex-grow: 1;
 }
 
 .outer:last-child {
@@ -32,7 +30,7 @@
 }
 
 .innerWrapper {
-  border: 2px solid rgb(210, 228, 210);
+  border: 2px solid green;
   //
   background-color: white;
   border-radius: 10px;
@@ -44,7 +42,7 @@
 }
 
 .inner {
-  // border: 1px solid red;
+  border: 1px solid red;
   //
   margin: 10px 0 10px 10px;
   //
@@ -52,7 +50,5 @@
 }
 
 .Test .GrowingInput {
-  // border: 1px solid red;
-  //
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
 }

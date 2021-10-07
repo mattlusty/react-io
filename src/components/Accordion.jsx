@@ -76,6 +76,7 @@ let content = [
             label: "Adviser",
             content: [],
             icon: "user",
+            url: "/dashboards/adviser",
             size: "1.5rem",
           },
           {
