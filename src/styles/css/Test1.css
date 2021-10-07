@@ -1,0 +1,43 @@
+.Test {
+  border: 5px solid red;
+  display: flex;
+  width: 100%;
+  min-width: fit-content;
+}
+
+.column {
+  border: 1px solid blue;
+  flex-grow: 1;
+}
+
+.outer {
+  border: 3px solid black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 10px;
+  width: fit-content;
+}
+
+.outer:last-child {
+  margin: 10px;
+}
+
+.innerWrapper {
+  border: 2px solid green;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner {
+  border: 1px solid red;
+  margin: 10px 0 10px 10px;
+  white-space: nowrap;
+}
+
+.Test .GrowingInput {
+  margin: 10px;
+}

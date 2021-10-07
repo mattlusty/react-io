@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //
-import "../styles/css/navProfile.css";
+import "../styles/css/NavProfile.css";
 //
 import DropDown from "./DropDown";
 
