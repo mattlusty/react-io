@@ -6,9 +6,17 @@
   border-radius: 3px;
 }
 
+.pageSize .GrowingInput {
+  margin-right: 5px;
+}
+
+.pageSize .GrowingInput input {
+  text-align: center;
+}
+
 .GrowingInput {
-  // display: inline-grid;
-  display: grid;
+  display: inline-grid;
+  // display: grid;
   align-items: center;
 
   // margin-right: 5px;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 //
 import "./styles/css/App.css";
 //
@@ -12,6 +13,7 @@ import Nav from "./components/Nav";
 import NavToggler from "./components/NavToggle";
 import SideMenu from "./components/SideMenu";
 import Page from "./components/Page";
+import Login from "./components/Login";
 
 import { forcePageReflow } from "./scripts/utils.js";
 
@@ -81,10 +83,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav nav={this.state.nav} onTransitionEnd={this.handleNavTransitionEnd} />
-        <NavToggler onClick={this.handleNavToggle} />
-        <SideMenu />
-        <Page />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/">
+            <div className="WebApp">
+              <Nav nav={this.state.nav} onTransitionEnd={this.handleNavTransitionEnd} />
+              <NavToggler onClick={this.handleNavToggle} />
+              <SideMenu />
+              <Page />
+            </div>
+          </Route>
+        </Switch>
       </div>
     );
   }

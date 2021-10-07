@@ -2,7 +2,8 @@ import React, { Component } from "react";
 // Styles
 import "../styles/css/Pagination.css";
 // Components
-import MultiSelect from "./MultiSelect";
+// import MultiSelect from "./MultiSelect";
+import GrowingInput from "./GrowingInput";
 
 class Pagination extends Component {
   getPageSelection = () => {
@@ -28,7 +29,7 @@ class Pagination extends Component {
       <div className="pagination">
         <div className="pageSize">
           <div>
-            <MultiSelect />
+            <GrowingInput size="1" />
             <label htmlFor="pageSize">Results per page</label>
           </div>
         </div>

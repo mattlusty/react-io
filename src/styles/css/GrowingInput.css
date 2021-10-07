@@ -6,8 +6,16 @@
   border-radius: 3px;
 }
 
+.pageSize .GrowingInput {
+  margin-right: 5px;
+}
+
+.pageSize .GrowingInput input {
+  text-align: center;
+}
+
 .GrowingInput {
-  display: grid;
+  display: inline-grid;
   align-items: center;
 }
 
