@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 //
 import "../styles/css/Accordion.css";
 //
@@ -8,8 +8,6 @@ class AccordionMenu extends Component {
   myRef = React.createRef();
 
   handleScroll = (e) => {
-    var e = e;
-    console.log("EVENT", e);
     // console.log(this.myRef);
 
     var scrollTop = this.myRef.current.scrollTop;

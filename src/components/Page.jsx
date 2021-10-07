@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 //
 import "../styles/css/Page.css";
-import clients from "../data/clients.js";
+// import clients from "../data/clients.js";
 //
 import Client from "./Client";
 import Adviser_Dash from "./areas/home/dashboards/Adviser_Dash";
