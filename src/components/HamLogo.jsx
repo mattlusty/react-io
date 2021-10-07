@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // Styles
-import "./HamLogo";
 import "../styles/css/HamLogo.css";
 
 class HamLogo extends Component {

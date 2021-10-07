@@ -11,26 +11,26 @@
   border: 1px solid (var(--color-grey-dark1));
 }
 
-.profile-wrapper.open .drop-down {
+.profile-wrapper.open .DropDown {
   display: block;
 }
 
-.drop-down li {
+.DropDown li {
   padding: 10px;
 }
-.drop-down li:not(.header):hover {
+.DropDown li:not(.header):hover {
   background-color: rgb(247, 247, 247);
 }
 
-.drop-down li.logout:hover {
+.DropDown li.logout:hover {
   border-top: 1px solid var(--color-grey-lighter5);
 }
 
-.drop-down li.header {
+.DropDown li.header {
   border-bottom: 1px solid #deedee;
 }
 
-.drop-down li.logout {
+.DropDown li.logout {
   border-top: 1px solid #deedee;
   background-color: var(--color-bg-light);
 }
