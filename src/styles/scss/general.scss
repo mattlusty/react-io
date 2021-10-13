@@ -146,6 +146,7 @@ body::before {
   padding-right: 10px;
 }
 
+// deprecated
 .marg-l {
   margin-left: 10px;
 }
@@ -176,6 +177,7 @@ body::before {
   border-right: 1px solid white;
 }
 
+// deprecated
 // new mindset = just place within a specific selector (definitely dont add these classes inline)
 .rounded {
   border-radius: 10px;

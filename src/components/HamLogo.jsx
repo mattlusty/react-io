@@ -12,8 +12,8 @@ class HamLogo extends Component {
             <i className={icon}></i>
           </div>
         </div>
-        <div className="logoWrapper rounded marg-l flex-grow flex-collapse">
-          <div className="logo rounded ">
+        <div className="logoWrapper flex-grow flex-collapse">
+          <div className="logo ">
             <div className="text">Intelligent Office</div>
           </div>
         </div>
