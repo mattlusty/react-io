@@ -13,7 +13,7 @@ class HamLogo extends Component {
           </div>
         </div>
         <div className="logoWrapper rounded marg-l flex-grow flex-collapse">
-          <div className="logo rounded flex-center-v ">
+          <div className="logo rounded ">
             <div className="text">Intelligent Office</div>
           </div>
         </div>

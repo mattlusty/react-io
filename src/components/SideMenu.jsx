@@ -6,23 +6,23 @@ import HamLogo from "./HamLogo";
 import Accordion from "./Accordion";
 
 class SideMenu extends Component {
-  state = {
-    hidden: true,
-  };
+  // state = {
+  //   hidden: this.props.hidden,
+  // };
 
-  onClick = () => {
-    this.setState({ hidden: !this.state.hidden });
-  };
+  // onClick = () => {
+  //   this.setState({ hidden: !this.state.hidden });
+  // };
 
   render() {
-    let wrapperClasses = `sideMenuWrapper ${this.state.hidden ? "hidden" : ""}`;
-    let menuClasses = `side-menu ${this.state.hidden ? "hidden" : ""}`;
+    let wrapperClasses = `sideMenuWrapper ${this.props.hidden ? "hidden" : ""}`;
+    let menuClasses = `side-menu ${this.props.hidden ? "hidden" : ""}`;
 
     return (
       <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
         <div className={menuClasses}>
           <div className="menuHeader">
-            <HamLogo onClick={this.onClick} open={!this.state.hidden} />
+            <HamLogo onClick={this.props.toggleSideMenu} open={!this.props.hidden} />
           </div>
           <Accordion />
         </div>

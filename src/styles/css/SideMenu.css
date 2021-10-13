@@ -19,6 +19,7 @@
   border-right: 1px solid var(--color-menu-border);
   box-sizing: content-box;
   font-size: 1.2rem;
+  overflow: hidden;
 }
 
 .sideMenuWrapper.hidden {

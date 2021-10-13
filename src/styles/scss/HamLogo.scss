@@ -32,6 +32,12 @@
   height: 100%;
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
   // border: 1px solid (var(--color-item-border));
+  //
+  overflow: hidden;
+  //
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .logo .text {

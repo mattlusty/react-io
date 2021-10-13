@@ -19,15 +19,19 @@
   border-right: 1px solid var(--color-menu-border);
   box-sizing: content-box;
   font-size: 1.2rem;
+  //
+  overflow: hidden;
 }
 
 .sideMenuWrapper.hidden {
   //width: 58px;
   width: calc(var(--height-primary) + var(--pad) * 2);
+  // width: 0px;
 }
 
 .side-menu.hidden {
   width: calc(var(--height-primary) + var(--pad) * 2);
+  // width: 0px;
 }
 
 .menuHeader {

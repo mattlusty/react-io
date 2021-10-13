@@ -6,33 +6,33 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <div class="loginContainer">
-          <div class="header">
-            <div class="name">
-              <span class="intelliflo">intelliflo</span>
-              <span class="office">office</span>
+        <div className="loginContainer">
+          <div className="header">
+            <div className="name">
+              <span className="intelliflo">intelliflo</span>
+              <span className="office">office</span>
             </div>
           </div>
-          <div class="content">
-            <label for="username" class="username" type="label">
+          <form className="content">
+            <label htmlFor="username" className="username" type="label">
               Email or Username
             </label>
-            <input id="username" class="username" type="text"></input>
-            <label for="password" class="password" type="label">
+            <input id="username" className="username" type="text"></input>
+            <label htmlFor="password" className="password" type="label">
               Password
             </label>
-            <input id="password" class="password" type="password"></input>
-            <div class="reset">Forgotten your password?</div>
+            <input id="password" className="password" type="password"></input>
+            <div className="reset">Forgotten your password?</div>
             <button
-              class="password"
+              className="password"
               type="button"
               onClick={() => {
-                this.props.history.push("/");
+                this.props.history.push("/leads");
               }}
             >
               Login
             </button>
-          </div>
+          </form>
         </div>
       </div>
     );
