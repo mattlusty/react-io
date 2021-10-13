@@ -1,0 +1,20 @@
+.AccordionWrapper {
+  display: flex;
+  height: 100%;
+  // overflow: hidden; // moved to SideMenu
+}
+
+// needs moving to Main
+.accordionSide {
+  opacity: 0;
+  // background-color: red;
+  position: fixed;
+  // right: -20px;
+  width: 20px;
+  height: 100%;
+  // margin-left: -10px;
+  cursor: pointer;
+  // position: relative;
+  // visibility: hidden;
+  // opacity: 0;
+}

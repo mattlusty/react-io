@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "../styles/css/SideMenu.css";
 //
 import HamLogo from "./HamLogo";
-import Accordion from "./Accordion";
+import AccordionWrapper from "./AccordionWrapper";
 
 class SideMenu extends Component {
   // state = {
@@ -21,10 +21,10 @@ class SideMenu extends Component {
     return (
       <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
         <div className={menuClasses}>
-          <div className="menuHeader">
+          <div className="menuHeader" onClick={() => console.log("CLIK")}>
             <HamLogo onClick={this.props.toggleSideMenu} open={!this.props.hidden} />
           </div>
-          <Accordion />
+          <AccordionWrapper toggleSideMenu={this.props.toggleSideMenu} />
         </div>
       </div>
     );

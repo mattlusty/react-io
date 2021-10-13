@@ -93,6 +93,7 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
+        <div className="accordionSide" onClick={this.handleToggleSideMenu} />
         <Nav
           nav={this.state.nav}
           onTransitionEnd={this.handleNavTransitionEnd}

@@ -1,41 +1,46 @@
 .sideMenuWrapper {
-  width: 250px; // (originally 250px - then 300px)
-  flex-shrink: 0;
-  transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  // width: 250px; // (originally 250px - then 300px)
+  // flex-shrink: 0;
+  // transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 }
 
 .side-menu {
-  // MAIN
   border-right: 1px solid var(--color-menu-border);
   background-color: var(--color-bg-sidemenu);
+
+  // MAIN
   width: 252px; // (was 252px - then 300px)
   height: 100vh;
+  overflow: hidden;
+
   // POSITION
   position: fixed; //not needed now
   top: 0;
-  overflow: hidden;
+  // overflow: hidden;
   box-sizing: content-box;
   z-index: 999;
+
   // DISPLAY
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+
   // OTHER
   transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+
   // STYLE
   box-shadow: var(--shad-lighter);
   font-size: 1.2rem;
 }
 
 .sideMenuWrapper.hidden {
-  //width: 58px;
-  width: calc(var(--height-primary) + var(--pad) * 2);
-  // width: 0px;
+  // width: calc(var(--height-primary) + var(--pad) * 2); // (originally 58px - for complete collapse 0px)
+  width: 0px;
 }
 
 .side-menu.hidden {
   width: calc(var(--height-primary) + var(--pad) * 2);
-  // width: 0px;
+  width: 0px;
 }
 
 .menuHeader {

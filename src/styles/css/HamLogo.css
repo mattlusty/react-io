@@ -1,7 +1,7 @@
 .HamLogo {
-  padding: 10px;
   background-color: var(--color-bg-header);
   display: flex;
+  padding: 10px;
 }
 
 .ham {

@@ -1,25 +1,36 @@
+.HamLogoWrapper {
+  // overflow: hidden; // moved to SideMenu
+}
+
 .HamLogo {
-  // overflow: hidden;
-  padding: 10px;
   background-color: var(--color-bg-header);
+
+  // MAIN
+  // overflow: hidden;
+
+  // DISPLAY
   display: flex;
+
+  // OTHER
+  padding: 10px;
 }
 
 .ham {
   border: 1px solid (var(--color-item-border));
   background-color: var(--color-bg-test3);
+
   // MAIN
   height: 38px;
   width: var(--height-primary);
   margin-right: 10px;
-  // STYLES
+
+  // OTHER
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
   cursor: pointer;
 }
 
 .logoWrapper {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
-  // width: 222px; // testing
   margin-left: 10px;
   border-radius: 10px;
 }
@@ -27,12 +38,13 @@
 .logo {
   border: 1px solid (var(--color-item-border));
   background-color: var(--color-bg-test3);
-  // -----
-  // STYLE
-  // -----
+
+  // MAIN
   height: 100%; // (let neighbour indirectly set height) (was 38px)
-  // margin-left: 10px;
   text-align: center;
+  // margin-left: 10px;
+
+  // OTHER
   overflow: hidden;
   font-size: 2.5rem;
   font-family: "sam";
@@ -49,7 +61,6 @@
   align-items: center;
   //
   flex-shrink: 0;
-  // STYLE
-  // width: 222px;
+  // OTHER
   transform: translateY(2px);
 }
