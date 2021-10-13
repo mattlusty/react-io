@@ -6,15 +6,7 @@ import "./styles/css/HamLogo.css";
 import "./styles/css/card.css";
 import "./styles/css/icons.css";
 import "./styles/icons/custom_icons.css";
-// Removed
-import "./styles/css/App.css";
-// Removed
-import Nav from "./components/Nav";
-import NavToggler from "./components/NavToggle";
-import SideMenu from "./components/SideMenu";
-import Page from "./components/Page";
-// Removed
-import { forcePageReflow } from "./scripts/utils.js";
+
 // Components
 import Login from "./components/Login";
 import Main from "./components/Main";
