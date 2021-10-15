@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   display: flex;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color-bg-header);
   box-shadow: var(--shad-lighter);
   box-sizing: content-box;

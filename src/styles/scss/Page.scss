@@ -1,11 +1,12 @@
 .page {
+  // border: 3px solid red;
   // padding: 20px;
+  display: flex;
   flex-grow: 1;
   margin-top: 58px;
   padding-bottom: 50px;
   //
   overflow: scroll;
-  display: flex;
 }
 
 .container {
