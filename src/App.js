@@ -6,7 +6,6 @@ import "./styles/css/HamLogo.css";
 import "./styles/css/card.css";
 import "./styles/css/icons.css";
 import "./styles/icons/custom_icons.css";
-import "overlayscrollbars/css/OverlayScrollbars.css";
 
 // Components
 import Login from "./components/Login";
