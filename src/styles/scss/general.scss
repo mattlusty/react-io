@@ -9,6 +9,23 @@ VP   V8P  `Y88P'  88   YD YP  YP  YP YP   YP Y88888P Y888888P `8888Y' Y8888*/
   box-sizing: border-box;
 }
 
+// html::-webkit-scrollbar {
+//   width: 12px;
+//   background-color: rgb(255, 255, 255);
+// }
+
+// html::-webkit-scrollbar-thumb {
+//   background-color: rgb(134, 134, 134);
+//   border-radius: 6px;
+//   background-clip: padding-box;
+//   border: 3px solid rgba(211, 35, 102, 0);
+// }
+
+// html::-webkit-scrollbar-track {
+//   // border-left: 1px solid rgb(82, 82, 82);
+//   // border-right: 1px solid rgb(82, 82, 82);
+// }
+
 body {
   margin: 0;
   padding: 0;

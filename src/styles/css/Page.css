@@ -3,7 +3,19 @@
   flex-grow: 1;
   margin-top: 58px;
   padding-bottom: 50px;
-  overflow: scroll;
+  overflow-x: scroll;
+}
+
+.page::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.page::-webkit-scrollbar-thumb {
+  background-color: #868686;
+  border-radius: 6px;
+  background-clip: padding-box;
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 
 .container {

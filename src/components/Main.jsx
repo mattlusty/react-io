@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 //
 import { forcePageReflow } from "../scripts/utils.js";
 //
@@ -92,17 +93,19 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="Main">
-        <div className="accordionSide" onClick={this.handleToggleSideMenu} />
-        <Nav
-          nav={this.state.nav}
-          onTransitionEnd={this.handleNavTransitionEnd}
-          toggleSideMenu={this.handleToggleSideMenu}
-        />
-        <NavToggler onClick={this.handleNavToggle} />
-        <SideMenu toggleSideMenu={this.handleToggleSideMenu} hidden={this.state.sideMenu.hidden} />
-        <Page />
-      </div>
+      <OverlayScrollbarsComponent>
+        <div className="Main">
+          <div className="accordionSide" onClick={this.handleToggleSideMenu} />
+          <Nav
+            nav={this.state.nav}
+            onTransitionEnd={this.handleNavTransitionEnd}
+            toggleSideMenu={this.handleToggleSideMenu}
+          />
+          <NavToggler onClick={this.handleNavToggle} />
+          <SideMenu toggleSideMenu={this.handleToggleSideMenu} hidden={this.state.sideMenu.hidden} />
+          <Page />
+        </div>
+      </OverlayScrollbarsComponent>
     );
   }
 }

@@ -1,5 +1,6 @@
 .HamLogo {
   background-color: var(--color-bg-header);
+  color: red;
   display: flex;
   padding: 10px;
 }
