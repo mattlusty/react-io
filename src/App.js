@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import { Scrollbars } from "react-custom-scrollbars";
 //
 import "./styles/css/general.css";
 import "./styles/css/HamLogo.css";
