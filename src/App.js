@@ -15,12 +15,14 @@ import Main from "./components/Main";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/" component={Main} />
-        </Switch>
-      </div>
+      <Scrollbars style={{ width: "100%", height: "100%" }}>
+        <div className="App">
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/" component={Main} />
+          </Switch>
+        </div>
+      </Scrollbars>
     );
   }
 }
