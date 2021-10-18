@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Scrollbars } from "react-custom-scrollbars";
+
 //
 import "./styles/css/general.css";
 import "./styles/css/HamLogo.css";
@@ -15,14 +15,12 @@ import Main from "./components/Main";
 class App extends Component {
   render() {
     return (
-      <Scrollbars style={{ width: "100%", height: "100%" }}>
-        <div className="App">
-          <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/" component={Main} />
-          </Switch>
-        </div>
-      </Scrollbars>
+      <div className="App">
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/" component={Main} />
+        </Switch>
+      </div>
     );
   }
 }
