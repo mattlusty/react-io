@@ -95,7 +95,10 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <OverlayScrollbarsComponent style={{ width: "100%", height: "100%" }}>
+        <OverlayScrollbarsComponent
+          style={{ width: "100%", height: "100%" }}
+          options={{ scrollbars: { autoHide: "scroll" } }}
+        >
           <div className="accordionSide" onClick={this.handleToggleSideMenu} />
           <Nav
             nav={this.state.nav}
