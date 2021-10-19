@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
-
 //
 import { forcePageReflow } from "../scripts/utils.js";
 //
@@ -23,20 +22,35 @@ class Main extends Component {
     },
     sideMenu: {
       hidden: false,
+      fullClose: false,
     },
+    scrollerRef: React.createRef(),
   };
 
   componentDidMount() {
-    this.setState({ nav: { ...this.state.nav, element: this.state.nav.ref.current } });
+    this.setState({
+      nav: {
+        ...this.state.nav,
+        element: this.state.nav.ref.current,
+        onTransitionEnd: this.handleNavTransitionEnd,
+        onToggleSideMenu: this.handleToggleSideMenu,
+      },
+      sideMenu: {
+        ...this.state.sideMenu,
+        onToggleSideMenu: this.handleToggleSideMenu,
+      },
+    });
   }
 
   handleNavToggle = () => {
     let wasLocked = this.state.nav.locked;
-    let scroll = window.scrollY;
+    let s = window.scrollY;
+    let scroll = this.state.scrollerRef.current._osInstance.scroll().position.y;
 
     console.log({
       wasLocked,
       scroll,
+      s,
     });
     console.log("ref", this.state.nav.ref.current);
 
@@ -94,22 +108,19 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="Main">
-        <OverlayScrollbarsComponent
-          style={{ width: "100%", height: "100%" }}
-          options={{ scrollbars: { autoHide: "scroll" } }}
-        >
+      <OverlayScrollbarsComponent
+        style={{ width: "100%", height: "100%" }}
+        options={{ scrollbars: { autoHide: "scroll" } }}
+        ref={this.state.scrollerRef}
+      >
+        <div className="Main">
           <div className="accordionSide" onClick={this.handleToggleSideMenu} />
-          <Nav
-            nav={this.state.nav}
-            onTransitionEnd={this.handleNavTransitionEnd}
-            toggleSideMenu={this.handleToggleSideMenu}
-          />
+          <Nav nav={this.state.nav} sideMenu={this.state.sideMenu} />
           <NavToggler onClick={this.handleNavToggle} />
-          <SideMenu toggleSideMenu={this.handleToggleSideMenu} hidden={this.state.sideMenu.hidden} />
+          <SideMenu sideMenu={this.state.sideMenu} />
           <Page />
-        </OverlayScrollbarsComponent>
-      </div>
+        </div>
+      </OverlayScrollbarsComponent>
     );
   }
 }

@@ -15,16 +15,14 @@ class SideMenu extends Component {
   // };
 
   render() {
-    let wrapperClasses = `sideMenuWrapper ${this.props.hidden ? "hidden" : ""}`;
-    let menuClasses = `side-menu ${this.props.hidden ? "hidden" : ""}`;
-
+    let { hidden, fullClose, onToggleSideMenu } = this.props.sideMenu;
     return (
-      <div className={wrapperClasses} ref={this.sideMenuWrapperRef}>
-        <div className={menuClasses}>
+      <div className={`SideMenu ${fullClose ? "fullClose" : "partClose"} ${hidden ? "hidden" : ""}`}>
+        <div className="sideMenu">
           <div className="menuHeader" onClick={() => console.log("CLIK")}>
-            <HamLogo onClick={this.props.toggleSideMenu} open={!this.props.hidden} />
+            <HamLogo open={!hidden} sideMenu={this.props.sideMenu} />
           </div>
-          <AccordionWrapper toggleSideMenu={this.props.toggleSideMenu} />
+          <AccordionWrapper />
         </div>
       </div>
     );

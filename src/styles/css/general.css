@@ -200,6 +200,10 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
   --pad: 10px;
   --height-primary: 38px;
   --height-nav: calc(var(--height-primary) + 2 * var(--pad));
+  --size-sideMenu-fullClose-closed: 0px;
+  --size-sideMenu-partClose-closed: calc(var(--height-primary) + var(--pad) * 2);
+  --size-sideMenu-fullClose-open: 242px;
+  --size-sideMenu-partClose-open: 242px;
 }
 
 :root {

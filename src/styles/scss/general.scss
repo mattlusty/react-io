@@ -219,6 +219,10 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
    YP    YP   YP 88   YD Y888888P YP   YP Y8888P' Y88888P Y88888P `8888*/
 
 :root {
+  /////////////
+  // COLORS
+  /////////////
+
   // Blue Theme
   --color-bg-header: #e8f4f5;
   --color-bg-light: #f7fbfc;
@@ -256,9 +260,18 @@ Y8    8P 88ooo88 88oobY'    88    88ooo88 88oooY' 88      88ooooo `8bo.
   --shad-light: 0px 0px 10px rgba(0, 0, 0, 70%);
   --shad-lighter: 0px 0px 10px rgba(0, 0, 0, 30%);
 
+  /////////////
+  // SIZES
+  /////////////
+
   --pad: 10px;
   --height-primary: 38px; // many things depend on this (icons (hamburger menu) -> width of collapsed side-menu)
   --height-nav: calc(var(--height-primary) + 2 * var(--pad));
+
+  --size-sideMenu-fullClose-closed: 0px;
+  --size-sideMenu-partClose-closed: calc(var(--height-primary) + var(--pad) * 2);
+  --size-sideMenu-fullClose-open: 242px;
+  --size-sideMenu-partClose-open: 242px;
 }
 
 :root {

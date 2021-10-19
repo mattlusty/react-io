@@ -38,6 +38,7 @@ class Page extends Component {
     return (
       <div className="page">
         <Switch>
+          <Route path="/" exact component={Clients} />
           <Route path="/test" component={Test} />
           <Route path="/client" component={Client} />
           {/* Home */}

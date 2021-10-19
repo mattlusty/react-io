@@ -1,15 +1,30 @@
-.sideMenuWrapper {
-  // width: 250px; // (originally 250px - then 300px)
-  // flex-shrink: 0;
-  // transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+.SideMenu {
+  flex-shrink: 0;
+  transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 }
 
-.side-menu {
+.SideMenu.fullClose {
+  width: 242px; // (originally 250px - then 300px)
+}
+
+.SideMenu.partClose {
+  width: 252px; // (originally 250px - then 300px)
+}
+
+.SideMenu.hidden.fullClose {
+  width: 0px;
+}
+
+.SideMenu.hidden.partClose {
+  width: calc(var(--height-primary) + var(--pad) * 2);
+}
+
+.sideMenu {
   border-right: 1px solid var(--color-menu-border);
   background-color: var(--color-bg-sidemenu);
 
   // MAIN
-  width: 252px; // (was 252px - then 300px)
+  width: 252px; // (252px - originally) (300px - was then this) (242px - with no logo left margin)
   height: 100vh;
   overflow: hidden;
 
@@ -33,15 +48,36 @@
   font-size: 1.2rem;
 }
 
-.sideMenuWrapper.hidden {
+.SideMenu.fullClose .sideMenu {
+  width: 242px;
+}
+
+.SideMenu.partClose .sideMenu {
+  width: 252px;
+}
+
+// // for fully collapsing sideMenu (ie logo has no left margin)
+// .SideMenu .partCollapse {
+//   width: 252px;
+// }
+
+// .SideMenu .fullCollapse {
+//   width: 242px;
+// }
+
+.SideMenu.hidden.partClose .sideMenu {
+  width: calc(var(--height-primary) + var(--pad) * 2); // (originally 58px - for complete collapse 0px)
+}
+
+.SideMenu.hidden.fullClose .sideMenu {
   // width: calc(var(--height-primary) + var(--pad) * 2); // (originally 58px - for complete collapse 0px)
   width: 0px;
 }
 
-.side-menu.hidden {
-  // width: calc(var(--height-primary) + var(--pad) * 2);
-  width: 0px;
-}
+// .side-menu.hidden {
+//   // width: calc(var(--height-primary) + var(--pad) * 2);
+//   width: 0px;
+// }
 
 .menuHeader {
   box-shadow: var(--shad-lighter);

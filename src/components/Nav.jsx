@@ -10,15 +10,15 @@ import NavProfile from "./NavProfile";
 
 class Nav extends Component {
   render() {
-    let { locked, fixed, transition, translate, ref } = this.props.nav;
+    let { locked, fixed, transition, translate, ref, onTransitionEnd, onToggleSideMenu } = this.props.nav;
     let classes = `nav ${locked ? "locked" : ""} ${transition ? "transition" : ""} ${fixed ? "fixed" : ""}`;
     let style = translate ? { transform: "translateY(-" + translate + "px)" } : {};
     console.log("Toglle?", this.props.toggleSideMenu);
     return (
       <div className="navWrapper">
         <div className="navPlaceHolder"></div>
-        <div className={classes} style={style} ref={ref} onTransitionEnd={this.props.onTransitionEnd}>
-          <HamLogo onClick={this.props.toggleSideMenu} />
+        <div className={classes} style={style} ref={ref} onTransitionEnd={onTransitionEnd}>
+          <HamLogo onClick={onToggleSideMenu} sideMenu={this.props.sideMenu} />
           <div className="flex-grow"></div>
           <NavSearch />
           <NavProfile />
