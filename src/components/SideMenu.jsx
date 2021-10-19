@@ -15,7 +15,7 @@ class SideMenu extends Component {
   // };
 
   render() {
-    let { hidden, fullClose, onToggleSideMenu } = this.props.sideMenu;
+    let { hidden, fullClose } = this.props.sideMenu;
     return (
       <div className={`SideMenu ${fullClose ? "fullClose" : "partClose"} ${hidden ? "hidden" : ""}`}>
         <div className="sideMenu">
