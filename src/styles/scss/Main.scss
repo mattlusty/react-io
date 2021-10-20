@@ -6,3 +6,11 @@
   user-select: none;
   height: 100vh;
 }
+
+.accordionSide {
+  opacity: 0;
+  position: fixed;
+  width: 20px;
+  height: 100%;
+  cursor: pointer;
+}

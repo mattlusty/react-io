@@ -1,4 +1,9 @@
 .Accordion {
+  display: flex;
+  height: 100%;
+}
+
+.accordion {
   position: relative;
   flex-grow: 1;
   padding: 2px 10px 10px 10px;
@@ -6,7 +11,7 @@
   width: 100%;
 }
 
-.Accordion::-webkit-scrollbar {
+.accordion::-webkit-scrollbar {
   display: none;
 }
 

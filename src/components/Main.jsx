@@ -44,15 +44,7 @@ class Main extends Component {
 
   handleToggleNav = () => {
     let wasLocked = this.state.nav.locked;
-    let s = window.scrollY;
     let scroll = this.state.scrollerRef.current._osInstance.scroll().position.y;
-
-    console.log({
-      wasLocked,
-      scroll,
-      s,
-    });
-    console.log("ref", this.state.nav.ref.current);
 
     if (scroll === 0) {
       this.setState((prevState) => ({
@@ -98,13 +90,8 @@ class Main extends Component {
   };
 
   handleToggleSideMenu = () => {
-    console.log("HANDLE SIDEMENU TOGGLE", this.state.sideMenu.hidden);
     this.setState({ sideMenu: { ...this.state.sideMenu, hidden: !this.state.sideMenu.hidden } });
   };
-
-  // componentDidUpdate() {
-  //   console.log("UPDATED");
-  // }
 
   render() {
     return (

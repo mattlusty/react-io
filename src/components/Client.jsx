@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// Data
+import clients from "../data/clients.js";
 // Styles
 import "../styles/css/Client.css";
 
@@ -8,7 +10,7 @@ class Client extends Component {
       <div className="Client card">
         <section>
           <div className="headerStrip">
-            <h1>{client.name}</h1>
+            <h1>{`${client.firstName} ${client.lastName}`}</h1>
           </div>
           <div className="content">
             <ul>
@@ -27,9 +29,4 @@ export default Client;
 
 // Fetch Data from API
 
-let client = {
-  name: "Tony Iony",
-  dob: "19/01/2000",
-  email: "tony@gmail.com",
-  adviser: "Richard Smith",
-};
+let client = clients[2];
