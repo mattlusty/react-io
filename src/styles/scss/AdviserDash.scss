@@ -1,0 +1,38 @@
+.AdviserDash {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  // align-items: center;
+}
+
+.adviserDash {
+  flex-grow: 1;
+  filter: blur(3px);
+}
+
+.adviserDash .content {
+  line-height: 23px;
+  color: red;
+}
+
+button {
+  border: 1px solid var(--color-item-border);
+  background-color: var(--color-bg-test1);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--color-bg-darker3);
+}
+
+.addAdviserWizard {
+  margin-top: 30px;
+  position: absolute;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--color-item-border);
+  height: 400px;
+  width: 700px;
+  // align-self: ce
+}

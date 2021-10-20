@@ -23,14 +23,15 @@
   border-right: 1px solid var(--color-menu-border);
   background-color: var(--color-bg-sidemenu);
 
-  // MAIN
-  width: 252px; // (252px - originally) (300px - was then this) (242px - with no logo left margin)
-  height: 100vh;
-  overflow: hidden;
-
   // POSITION
   position: fixed; //not needed now
   top: 0;
+
+  // MAIN
+  width: 252px; // (252px - originally) (300px - was then this) (242px - with no logo left margin)
+  height: 100vh;
+  // overflow: hidden; // not needed
+
   // overflow: hidden;
   box-sizing: content-box;
   z-index: 999;
@@ -38,7 +39,7 @@
   // DISPLAY
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  // flex-shrink: 0; // not needed
 
   // OTHER
   transition: 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);

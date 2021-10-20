@@ -5,7 +5,7 @@ import "../styles/css/Page.css";
 // import clients from "../data/clients.js";
 //
 import Client from "./Client";
-import Adviser_Dash from "./areas/home/dashboards/Adviser_Dash";
+import Adviser_Dash from "./areas/home/dashboards/AdviserDash";
 import Organiser_Dash from "./areas/home/dashboards/Organiser_Dash";
 import Admin_Dash from "./areas/home/dashboards/Admin_Dash";
 import WorkedOnItems_Recent from "./areas/home/recent-items/WorkedOnItems_Recent";

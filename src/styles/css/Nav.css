@@ -1,5 +1,6 @@
 .nav {
   position: absolute;
+  z-index: 99;
   top: 0;
   display: flex;
   width: 100%;

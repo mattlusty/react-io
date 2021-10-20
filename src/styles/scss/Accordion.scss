@@ -2,7 +2,12 @@
 
 .Accordion {
   display: flex;
-  height: 100%;
+  position: absolute;
+  top: 59px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // height: 100%; // incorrect
   // overflow: hidden; // moved to SideMenu
 }
 

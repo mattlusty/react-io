@@ -12,6 +12,7 @@
   min-width: fit-content;
   flex-grow: 1;
   display: inline-block;
+  height: fit-content;
 }
 
 .card:last-child {
@@ -24,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 20px;
   background-color: #e8f4f5;
   border-top: 1px solid #d2e7e8;
   border-bottom: 1px solid #d2e7e8;
