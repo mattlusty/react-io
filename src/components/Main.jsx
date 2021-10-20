@@ -42,7 +42,7 @@ class Main extends Component {
     });
   }
 
-  handleNavToggle = () => {
+  handleToggleNav = () => {
     let wasLocked = this.state.nav.locked;
     let s = window.scrollY;
     let scroll = this.state.scrollerRef.current._osInstance.scroll().position.y;
@@ -109,14 +109,14 @@ class Main extends Component {
   render() {
     return (
       <OverlayScrollbarsComponent
-        style={{ width: "100%", height: "100%" }}
+        style={{ height: "100%" }}
         options={{ scrollbars: { autoHide: "scroll" } }}
         ref={this.state.scrollerRef}
       >
         <div className="Main">
           <div className="accordionSide" onClick={this.handleToggleSideMenu} />
           <Nav nav={this.state.nav} sideMenu={this.state.sideMenu} />
-          <NavToggler onClick={this.handleNavToggle} />
+          <NavToggler onClick={this.handleToggleNav} />
           <SideMenu sideMenu={this.state.sideMenu} />
           <Page />
         </div>

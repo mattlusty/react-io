@@ -6,14 +6,6 @@ import HamLogo from "./HamLogo";
 import AccordionWrapper from "./AccordionWrapper";
 
 class SideMenu extends Component {
-  // state = {
-  //   hidden: this.props.hidden,
-  // };
-
-  // onClick = () => {
-  //   this.setState({ hidden: !this.state.hidden });
-  // };
-
   render() {
     let { hidden, fullClose } = this.props.sideMenu;
     return (
