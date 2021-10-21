@@ -45,7 +45,7 @@ class Main extends Component {
   handleToggleNav = () => {
     let wasLocked = this.state.nav.locked;
     let scroll = this.state.scrollerRef.current._osInstance.scroll().position.y;
-
+    console.log("scroll", this.state.scrollerRef.current._osInstance.scroll());
     if (scroll === 0) {
       this.setState((prevState) => ({
         nav: { ...prevState.nav, fixed: !prevState.nav.fixed, locked: !prevState.nav.fixed },
@@ -96,7 +96,7 @@ class Main extends Component {
   render() {
     return (
       <OverlayScrollbarsComponent
-        style={{ height: "100%" }}
+        style={{ height: "100vh" }}
         options={{ scrollbars: { autoHide: "scroll" } }}
         ref={this.state.scrollerRef}
       >

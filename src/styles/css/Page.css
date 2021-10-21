@@ -1,22 +1,9 @@
 .page {
-  display: flex;
-  flex-grow: 1;
   margin-top: 58px;
   padding-bottom: 70px;
   overflow-x: overlay;
-  height: 100%;
-}
-
-.page::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-.page::-webkit-scrollbar-thumb {
-  background-color: #868686;
-  border-radius: 6px;
-  background-clip: padding-box;
-  border: 3px solid rgba(0, 0, 0, 0);
+  display: flex;
+  flex-grow: 1;
 }
 
 .container {
