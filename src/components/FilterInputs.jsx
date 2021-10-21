@@ -7,7 +7,7 @@ import InputItem from "./InputItem";
 class FilterInputs extends Component {
   render() {
     return (
-      <form className="flex-spaced">
+      <form className="FilterInputs">
         {this.props.fields.map((block) => {
           return (
             <div key={Math.random()} className="columnGroup-item">

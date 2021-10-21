@@ -163,6 +163,10 @@ body::before {
   border-radius: 10px;
 }
 
+.blur {
+  filter: blur(3px);
+}
+
 .shad-hov:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
 }

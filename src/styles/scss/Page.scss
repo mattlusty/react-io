@@ -1,10 +1,12 @@
 .page {
   margin-top: 58px;
-  padding-bottom: 70px;
+  // padding-bottom: 70px; // (replaced with margin-bottom)
+  margin-bottom: 70px;
   //
   overflow-x: overlay;
   display: flex;
   flex-grow: 1;
+  position: relative;
 }
 
 .container {

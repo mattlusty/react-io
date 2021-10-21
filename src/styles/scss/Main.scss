@@ -1,6 +1,7 @@
 .Main {
   display: flex;
   position: relative;
+  min-height: 100vh;
   z-index: 999;
   user-select: none;
 }

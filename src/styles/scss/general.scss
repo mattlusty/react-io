@@ -116,6 +116,7 @@ body::before {
   justify-content: center;
 }
 
+// deprecated
 .flex-spaced {
   display: flex;
   justify-content: space-between;
@@ -198,6 +199,10 @@ body::before {
 // new mindset = just place within a specific selector (definitely dont add these classes inline)
 .rounded {
   border-radius: 10px;
+}
+
+.blur {
+  filter: blur(3px);
 }
 
 //////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,13 @@
+.Dashboard {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  padding: 10px;
+}
+
+.Dashboard .card {
+  width: 200px;
+  margin: 10px;
+}

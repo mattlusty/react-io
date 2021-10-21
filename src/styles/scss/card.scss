@@ -15,17 +15,13 @@
   height: fit-content;
 }
 
-.card:last-child {
-  // margin-bottom: 0;
-}
-
 // CARD SECTION COMPONENT
 
 .headerStrip {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 20px 10px 20px;
   background-color: #e8f4f5;
   border-top: 1px solid #d2e7e8;
   border-bottom: 1px solid #d2e7e8;
@@ -44,9 +40,14 @@ section:first-child .headerStrip {
   height: 35px;
 }
 
+.headerStrip button:last-child,
+.headerStrip .Icon:last-child {
+  margin-right: -10px;
+}
+
 // SUB AREAS - OF A CARD
 
-section .content {
+.card .content {
   color: var(--color-v-dark-grey);
   padding: 16px;
 }

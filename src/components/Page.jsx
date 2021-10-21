@@ -6,7 +6,7 @@ import "../styles/css/Page.css";
 //
 import Client from "./Client";
 import Adviser_Dash from "./areas/home/dashboards/AdviserDash";
-import Organiser_Dash from "./areas/home/dashboards/Organiser_Dash";
+// import Organiser_Dash from "./areas/home/dashboards/Organiser_Dash";
 import Admin_Dash from "./areas/home/dashboards/Admin_Dash";
 import WorkedOnItems_Recent from "./areas/home/recent-items/WorkedOnItems_Recent";
 import DocumentQueue_Recentx from "./areas/home/recent-items/DocumentQueue_Recent";
@@ -30,6 +30,8 @@ import IncomeUsers from "./areas/income/IncomeUsers";
 import IncomeClients from "./areas/income/IncomeClients";
 import IncomeAdvisers from "./areas/income/IncomeAdvisers";
 import IncomeAdministration from "./areas/income/IncomeAdministration";
+//
+import Dashboard from "./Dashboard";
 
 import Test from "./Test";
 
@@ -43,7 +45,7 @@ class Page extends Component {
           <Route path="/client" component={Client} />
           {/* Home */}
           <Route path="/dashboards/adviser" component={Adviser_Dash} />
-          <Route path="/dashboards/organiser" component={Organiser_Dash} />
+          <Route path="/dashboards/organiser" component={Dashboard} />
           <Route path="/dashboards/admin" component={Admin_Dash} />
           {/*  */}
           <Route path="/recent-items/worked-on-items" component={WorkedOnItems_Recent} />

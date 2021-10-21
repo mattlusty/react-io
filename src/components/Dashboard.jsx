@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 //
-import Card from "./Ycard";
+import "../styles/css/Dashboard.css";
 
 class Dashboard extends Component {
   render() {
     return (
-      <React.Fragment>
-        {cards.map((card) => {
-          return <Card key={card.title} card={card} />;
+      <div className="Dashboard">
+        {widgets.map((widget) => {
+          return (
+            <div key={Math.random()} className="card">
+              <section>
+                <div className="headerStrip">
+                  <h1>{widget.title}</h1>
+                </div>
+                <div className="content">content here</div>
+              </section>
+            </div>
+          );
         })}
-      </React.Fragment>
+      </div>
     );
   }
 }
@@ -18,7 +27,7 @@ export default Dashboard;
 
 // Fetch Data from API
 
-let cards = [
+let widgets = [
   {
     title: "My Recent Clients",
     content: [{ name: "Jason" }, { name: "Brian" }, { name: "Eric" }, { name: "David" }],

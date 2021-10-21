@@ -5,7 +5,7 @@ class Icon extends Component {
     let { type, name } = this.props;
     let style = { fontSize: this.props.size };
     return (
-      <div className={`${type}Icon`} style={style}>
+      <div className={`Icon ${type}Icon`} style={style} onClick={this.props.onClick ?? null}>
         <i className={`mai-${name}`}></i>
       </div>
     );

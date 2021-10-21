@@ -1,18 +1,20 @@
 .AdviserDash {
+  // border: 3px solid blue;
   display: flex;
   flex-grow: 1;
-  justify-content: center;
   // align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-.adviserDash {
-  flex-grow: 1;
-  filter: blur(3px);
+// to cancel default .card layout
+.adviserDash.card {
+  flex-grow: 0;
 }
 
+// maybe generic
 .adviserDash .content {
   line-height: 23px;
-  color: red;
 }
 
 button {
@@ -21,18 +23,40 @@ button {
   border-radius: 10px;
   padding: 10px;
   color: var(--color-bg-darker3);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
+}
+
+//
+
+.AddAdviserWizard {
+  // border: 3px solid red;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
 }
 
 .addAdviserWizard {
   margin-top: 30px;
   position: absolute;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+
+  // flex-grow: 1;
+  // flex-shrink: 1;
+  // justify-content: center;
+  // align-items: center;
   border: 1px solid var(--color-item-border);
   height: 400px;
-  width: 700px;
-  // align-self: ce
+  width: 400px;
+}
+
+.AddAdviserWizard.open {
+  display: flex;
 }
