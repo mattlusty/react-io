@@ -1,6 +1,7 @@
 .page {
   margin-top: 58px;
-  margin-bottom: 70px;
+  padding-bottom: 50px;
+  padding: 10px 10px 60px 10px;
   overflow-x: overlay;
   display: flex;
   flex-grow: 1;

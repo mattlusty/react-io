@@ -10,7 +10,7 @@ import Adviser_Dash from "./areas/home/dashboards/AdviserDash";
 import Admin_Dash from "./areas/home/dashboards/Admin_Dash";
 import WorkedOnItems_Recent from "./areas/home/recent-items/WorkedOnItems_Recent";
 import DocumentQueue_Recentx from "./areas/home/recent-items/DocumentQueue_Recent";
-import My_Documents from "./areas/library/MyDocuments";
+import MyDocuments from "./areas/library/MyDocuments";
 import Documents_Library from "./areas/library/Documents_Library";
 import Uploads from "./areas/home/Uploads";
 // Adviser Workplace
@@ -51,7 +51,7 @@ class Page extends Component {
           <Route path="/recent-items/worked-on-items" component={WorkedOnItems_Recent} />
           <Route path="/recent-items/document-queue" component={DocumentQueue_Recentx} />
           {/*  */}
-          <Route path="/library/my-documents" component={My_Documents} />
+          <Route path="/library/my-documents" component={MyDocuments} />
           <Route path="/library/documents" component={Documents_Library} />
           <Route path="/uploads" component={Uploads} />
           {/* Adviser Workplace */}

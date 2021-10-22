@@ -3,6 +3,8 @@ import { range } from "../../../scripts/utils.js";
 // Data
 import clients from "../../../data/clients.js";
 import { tableFields, inputFields } from "../../../data/clientsTableFields.js";
+// Styles
+import "../../../styles/css/Clients.css";
 // Components
 import FilterInputs from "../../FilterInputs";
 import Table from "../../Table";
@@ -50,24 +52,26 @@ class Clients extends Component {
   render() {
     let { pagination } = this.state;
     return (
-      <div className="card">
-        <section>
-          <div className="headerStrip">
-            <h1>Client Search Filters</h1>
-          </div>
-          <div className="content">
-            <FilterInputs fields={inputFields} />
-          </div>
-        </section>
-        <section>
-          <div className="headerStrip">
-            <h1>Client Search Results</h1>
-          </div>
-          <div className="content">
-            <Table data={pagination.pageClients} fields={tableFields} />
-            <TableControls pagination={pagination} onPageChange={this.handlePageChange} />
-          </div>
-        </section>
+      <div className="Clients">
+        <div className="clients card">
+          <section>
+            <div className="headerStrip">
+              <h1>Client Search Filters</h1>
+            </div>
+            <div className="content">
+              <FilterInputs fields={inputFields} />
+            </div>
+          </section>
+          <section>
+            <div className="headerStrip">
+              <h1>Client Search Results</h1>
+            </div>
+            <div className="content">
+              <Table data={pagination.pageClients} fields={tableFields} />
+              <TableControls pagination={pagination} onPageChange={this.handlePageChange} />
+            </div>
+          </section>
+        </div>
       </div>
     );
   }

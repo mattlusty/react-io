@@ -1,11 +1,13 @@
 .AdviserDash {
+  border: 3px solid blue;
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
   flex-direction: column;
 }
 
-.adviserDash.card {
+.adviserDash {
+  margin: 10px;
   flex-grow: 0;
 }
 
@@ -27,14 +29,14 @@ button:hover {
 }
 
 .AddAdviserWizard {
+  border: 3px solid red;
   position: absolute;
   display: flex;
   justify-content: center;
   top: 0;
-  bottom: 0;
+  bottom: 60px;
   left: 0;
   right: 0;
-  display: none;
 }
 
 .addAdviserWizard {

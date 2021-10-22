@@ -18,7 +18,7 @@ class HamLogo extends Component {
           </div>
           <div className={`logoWrapper flex-grow flex-collapse`} style={{ marginLeft }}>
             <div className="logo ">
-              <div className="text">Intelligent Office</div>
+              <div className="text">Lusty Financial</div>
             </div>
           </div>
         </div>

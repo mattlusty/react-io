@@ -4,7 +4,6 @@
   overflow: hidden;
   box-shadow: var(--shad-lighter);
   border: 1px solid var(--color-menu-border);
-  margin: 20px;
   margin-bottom: 0px;
   min-width: fit-content;
   flex-grow: 1;

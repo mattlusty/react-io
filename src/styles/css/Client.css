@@ -1,3 +1,12 @@
+.Client {
+  display: flex;
+  flex-grow: 1;
+}
+
+.client {
+  margin: 10px;
+}
+
 .Client .content {
   line-height: 23px;
   color: #1a98a1;
